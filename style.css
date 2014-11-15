@@ -1,0 +1,36 @@
+body, html{
+	width: 100%;
+}
+
+.screen{
+	position: relative;
+	top: 10%;
+	left: 20%;
+	width: 50%;
+	height: 20%;
+	background-color: rgba(0,0,0,.7);
+	border: 1px solid white;
+}
+
+.keypad{
+	position: relative;
+	top: 10%;
+	left: 20%;
+	width: 50%;
+	height: 60%;
+	background-color: rgba(0,0,0,.7);
+	border: 1px solid white;
+}
+
+.buttons{
+	width: 10%;
+	height: 10%;
+	background-color: #eee;
+	margin: 1em;
+	display: inline-block;
+	text-align: center;
+}
+
+.buttons:first-child{
+	background-color: red;
+}
