@@ -17,6 +17,7 @@
 	</div>
 
 	<!--	Keypad -->
+
 	<div class="keypad">
 		<div class="first column">
 			<div class="buttons"><span>OFF</span></div>
@@ -58,8 +59,9 @@
 			<div class="buttons"><span>M-</span></div>
 			<div class="buttons"><span>M+</span></div>
 		</div>
-		
 	</div>
+	
+
 </div>
 
 
@@ -71,16 +73,26 @@
 		// console.log(this);
 		var activeButton = $(this).addClass('active');
 		var activeSpan = $(activeButton).find('span');
-		var activeValue = parseInt($(activeSpan).text());
+		var activeValue = $(activeSpan).text();
 	
-		activeButton;
+	
 		console.log(activeSpan);
 		console.log(activeValue);
 
-		
+		activeButton;
 
-		$('.inner-screen').append('<span>' + activeValue + '</span>');
+		if(parseInt(activeValue)){
+			$('.inner-screen').append('<span>' + activeValue + '</span>');
+		} else {
+			console.log("No Value");
+		}
 	});
+
+	$('.first.buttons:last-child').on('click', function(e){
+			$('.inner-screen').html('');
+
+	});
+
 
 
 
