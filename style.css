@@ -82,6 +82,14 @@ body, html{
 	font-size: 1.2em;
 }
 
+.buttons:active{
+
+}
+
+.buttons:active span{
+/*	transition: ;*/
+}
+
 .first .buttons:first-child{
 	background-color: red;
 }

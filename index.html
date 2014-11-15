@@ -2,6 +2,7 @@
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
 <body>
 
@@ -10,6 +11,7 @@
 	<div class="screen">
 		<div class="outline">
 			<div class="inner-screen">
+
 			</div>
 		</div>
 	</div>
@@ -59,5 +61,30 @@
 		
 	</div>
 </div>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<script>
+
+	$('.buttons').on('click', function(){
+		// console.log(this);
+		var activeButton = $(this).addClass('active');
+		var activeSpan = $(activeButton).find('span');
+		var activeValue = parseInt($(activeSpan).text());
+	
+		activeButton;
+		console.log(activeSpan);
+		console.log(activeValue);
+
+		
+
+		$('.inner-screen').append('<span>' + activeValue + '</span>');
+	});
+
+
+
+</script>
+
 </body>
 </html>
