@@ -95,10 +95,12 @@ body, html{
 }
 
 .buttons:active{
-
+	box-shadow: 2px 3px 0 #000;
+	transform: translateY(2px);
 }
 
 .buttons:active span{
+	transform: translateY(-4px);
 }
 
 .first .buttons:first-child{
