@@ -337,6 +337,18 @@ body, html{
 	border: 1px solid black;
 }
 
+.cursor{
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 5px solid #000;
+	transform: skewX(-20deg);
+	display: none;
+	position: relative;
+
+}
+
 /******* Laptop Keyboard ********/
 .lap-bottom{
 	width: 100%;

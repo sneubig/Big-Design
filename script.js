@@ -52,4 +52,63 @@ $(document).ready(function(){
 	// var addValue = function(x, y){
 	// 	return x + y;
 	// }
+
+	// To Find Percentage Height and Width of the Mousepad
+	$('.mousepad').on('mouseenter', function(){
+		$('.cursor').show();
+	});
+
+	$('.mousepad').on('mouseleave', function(){
+		$('.cursor').hide();
+	});
+
+	$('.mousepad').on('mousemove', function(event){
+		 var position = $(this).position();
+     var offset = $(this).offset();
+     var x = event.pageX - (offset.left);
+     var y = event.pageY - (offset.top);
+     // Need to multiply percent variables by the height and width of the lap-screen instead of 100
+     var percentFromLeft = (x / 102) * 362;
+     var percentFromTop = (y / 48) * 180;
+
+     $('.cursor').css({
+     		// 'position': 'relative',
+     		'left': percentFromLeft,
+     		'top': percentFromTop 
+     });
+
+     // Displays the x and y coordinate percentages on mousemove of the mousepad
+		// $('.lap-screen').text( "pageX: " + percentFromLeft + ", pageY: " + percentFromTop );
+
+	});
+
+		$('.lap-screen').on('mousemove', function(event){
+		 			var position = $(this).position();
+     			var offset = $(this).offset();
+     			var x = event.pageX - (offset.left);
+     			var y = event.pageY - (offset.top);
+     			var percentFromLeft = x / 362 * 100;
+     			var percentFromTop = y / 180 * 100;
+
+			     // Displays the x and y coordinate percentages on mousemove on the lap-screen
+			     // $('.lap-bottom').text("pageX: " + x + ", pageY: " + y );
+
+
+				});
+
+	// When I mouseover the mousepad, I want the cursor to move the same percentage over the lap-screen
+		$('')
+
+
+	// To Find Percentage Height and Width of the Laptop Screen
+		$('.lap-screen').on('mouseenter', function(){
+		$('.cursor').show();
+	});
+
+	$('.lap-screen').on('mouseleave', function(){
+		$('.cursor').hide();
+	});
+
+	
+
 });
