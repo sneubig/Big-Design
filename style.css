@@ -171,20 +171,6 @@ body, html{
 	transform: translateY(2px);
 }
 
-/*.fifth .buttons:nth-child(3){
-	height: 45%;
-}*/
-
-/*.sixth .buttons{
-	background-color: black;
-	box-shadow: -5px 5px 0px #000;
-}
-
-.sixth .buttons:active{
-	background-color: black;
-	box-shadow: -3px 3px 0px #000;
-	transform: translateY(2px);
-}*/
 
 
 
@@ -317,9 +303,59 @@ body, html{
 }
 
 
+/*********** Laptop *************/
 
+/******* Container ********/
 
+.lap-container{
+	width: 40%;
+	height: 60%;
+	position: absolute;
+	top: 10%;
+	left: 10%;
+}
 
+/******* Laptop Screen ********/
 
+.lap-top{
+	width: 100%;
+	height: 60%;
+	background-color: silver;
+	border-radius: 10%;
+	position: relative;
+	border: 1px solid black;
+}
+
+.lap-screen{
+	width: 90%;
+	height: 80%;
+	background-color: #fff;
+	border-radius: 2%;
+	position: relative;
+	left: 5%;
+	top: 10%;
+	border: 1px solid black;
+}
+
+/******* Laptop Keyboard ********/
+.lap-bottom{
+	width: 100%;
+	height: 50%;
+	background-color: blue;
+	border-radius: 10%;
+	position: relative;
+	border: 1px solid black;
+}
+
+.mousepad{
+	width: 25%;
+	height: 25%;
+	background-color: silver;
+	border: 1px solid black;
+	border-radius: 10%;
+	position: absolute;
+	bottom: 5%;
+	left: 37.5%;
+}
 
 
