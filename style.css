@@ -1,6 +1,6 @@
 body, html{
 	width: 100%;
-	background-color: #aaa;
+	background-color: tan;
 }
 
 .calc-container{
@@ -184,69 +184,134 @@ body, html{
 
 /*********** Lamp *************/
 	
-	/******* Container ********/
+/******* Container ********/
 
-	.lamp-container{
-		width: 20%;
-		height: 50%;
-		position: absolute;
-		right: 10%;
-		top: 5%;
-	}
+.lamp-container{
+	width: 20%;
+	height: 50%;
+	position: absolute;
+	right: 10%;
+	top: 5%;
+}
 
-	/******* Base ********/
+/******* Base ********/
 
-	.shade{
-		width: 100px;
-		height: 0;
-		border-bottom: 100px solid rgba(0,0,240,.5);
-		border-left: 50px solid transparent;
-		border-right: 50px solid transparent;
-		z-index: 5;
-	}
+.shade{
+	width: 100px;
+	height: 0;
+	border-bottom: 100px solid rgba(0,0,240,.5);
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	z-index: 5;
+}
 
-	.bulb{
-		width: 10%;
-		height: 10%;
-		background-color: yellow;
-		border-radius: 100%;
-		position: relative;
-		left: 35%;
-		top: -15%;
-		z-index: 3;
-	}
+.bulb{
+	width: 10%;
+	height: 10%;
+	background-color: yellow;
+	border-radius: 100%;
+	position: relative;
+	left: 35%;
+	top: -15%;
+	z-index: 3;
+}
 
-	.stand{
-		width: 5%;
-		height: 5%;
-		background-color: #000;
-		position: relative;
-		left: 37.5%;
-		top: -15%;
-		z-index: 2;
-	}
+.stand{
+	width: 5%;
+	height: 5%;
+	background-color: #000;
+	position: relative;
+	left: 37.5%;
+	top: -15%;
+	z-index: 2;
+}
 
-	.base{
-		width: 40%;
-		height: 50%;
-		background-color: #eee;
-		border-radius: 10%;
-		position: relative;
-		top: -15%;
-		left: 20%;
+.base{
+	width: 40%;
+	height: 50%;
+	background-color: #eee;
+	border-radius: 10%;
+	position: relative;
+	top: -15%;
+	left: 20%;
 
-	}
+}
 
-	.switch{
-		width: 8%;
-		height: 10%;
-		background-color: black;
-		position: relative;
-		left: 40%;
-		top: 80%;
-		border-radius: 40%;
-		transform: skewX(25deg);
-	}
+.switch{
+	width: 8%;
+	height: 10%;
+	background-color: black;
+	position: relative;
+	left: 40%;
+	top: 80%;
+	border-radius: 40%;
+	transform: skewX(25deg);
+}
+
+
+/*********** Clock *************/
+
+/******* Container ********/
+
+.clock-container{
+	width: 30%;
+	height: 30%;
+	position: absolute;
+	bottom: 20%;
+	left: 60%;
+}
+
+.clock-frame{
+	width: 15em;
+	height: 15em;
+	background-color: #ccc;
+	border-radius: 100%;
+}
+
+.clock-face{
+	width: 12em;
+	height: 12em;
+	background-color: #fff;
+	border-radius: 100%;
+	position: relative;
+	top: 10%;
+	left: 10%;
+}
+
+.clock-face span{
+	border-radius: 100%;
+}
+
+.center{
+	width: 1em;
+	height: 1em;
+	background-color: #000;
+	border-radius: 100%;
+	position: relative;
+	top: 45%;
+	left: 45%;
+}
+
+.min-hand{
+	width: .5em;
+	height: 5em;
+	background-color: #000;
+	position: relative;
+	top: 45%;
+	left: 45%;
+}
+
+.hour-hand{
+	width: .5em;
+	height: 3em;
+	background-color: orange;
+	position: relative;
+	top: -30%;
+	left: 45%;
+}
+
+
+
 
 
 
