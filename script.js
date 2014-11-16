@@ -1,18 +1,9 @@
-
-
-var keys = document.querySelectorAll('.buttons span');
-var operators = ['+', '-', 'x', '÷'];
-var decimalAdded = false;
-
-
-
-
-
+$(document).ready(function(){
 	$('.buttons').on('click', function(){
 
 		// console.log(this);
 		var activeButton = $(this).addClass('active');
-		var removeActive = $('.active').removeClass('active');
+		// var removeActive = $('.active').removeClass('active');
 		var activeSpan = $(activeButton).find('span');
 		var activeValue = $(activeSpan).text();
 
@@ -20,32 +11,30 @@ var decimalAdded = false;
 		var inputVal = input.innerHTML;
 
 		// Makes the button that is clicked active
-		activeButton;
+		activeButton
 
-		// // Removes active class from all buttons, to reset
-		// removeActive;
-
+		// If clear button is pressed, erase everything
 		if(activeValue == 'C'){
 			input.innerHTML = '';
-			console.log(inputVal);
+			console.log(input.innerHTML);
+		}
+
+		if(activeValue == '+'){
+			console.log(activeValue + "hey");
+			input.innerHTML += activeValue;
 		}
 
 		if(parseInt(activeValue) || activeValue == 0){
 			$('.inner-screen').append('<span>' + activeValue + '</span>');
-		} else{
 			console.log(activeValue);
-		}
+		} 
 
 	});
 
-	$('.clear').on('click', function(){
 
-	})
-
-
-	var addActiveClass = function(){
-
-	}
+	// var addActiveClass = function(input1, input2){
+	// 	return input1 + input2;
+	// };
 
 
 
@@ -60,7 +49,7 @@ var decimalAdded = false;
 	// });
 
 
-	var addValue = function(x, y){
-		return x + y;
-	}
-
+	// var addValue = function(x, y){
+	// 	return x + y;
+	// }
+});
