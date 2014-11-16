@@ -14,14 +14,16 @@ body, html{
 
 .screen{
 	position: relative;
-	width: 50%;
-	min-width: 20em;
-	height: 20%;
+	left: -30px;
+	width: 30%;
+	min-width: 10em;
+	height: 10%;
 	min-height: 5em;
-	background-color: rgba(0,0,0,.7);
+	background-color: rgba(50,50,50,1);
 	border: 1px solid white;
 	border-radius: 2%;
-	box-shadow: -5px 0 0px -2px #000;
+	box-shadow: -10px 15px 0px #212121;
+	transform: skewX(-5deg);
 }
 
 .outline{
@@ -35,8 +37,8 @@ body, html{
 }
 
 .inner-screen{
-	width: 80%;
-	height: 80%;
+	width: 40%;
+	height: 40%;
 	position: relative;
 	top: 10%;
 	left: 10%;
@@ -52,14 +54,15 @@ body, html{
 }
 
 .keypad{
-	width: 50%;
-	min-width: 20em;
-	height: 50%;
-	min-height: 15em;
-	background-color: rgba(0,0,0,.7);
+	width: 30%;
+	min-width: 10em;
+	height: 30%;
+	min-height: 7.5em;
+	background-color: rgba(50,50,50,1);
 	border: 1px solid white;
 	border-radius: 1%;
-	box-shadow: -5px 10px 0px #000;
+	box-shadow: -20px 15px 0px #212121;
+	transform: skewX(20deg);
 }
 
 .column{
@@ -85,17 +88,17 @@ body, html{
 	text-align: center;
 	border: 1px solid #aaa;
 	border-radius: 10%;
-	box-shadow: 0px 5px 0px #212121;
+	box-shadow: -5px 5px 0px #212121;
 }
 
 .buttons span{
 	position: relative;
 	top: 30%;
-	font-size: 1.2em;
+	font-size: 1em;
 }
 
 .buttons:active{
-	box-shadow: 0px 3px 0px #212121;
+	box-shadow: -3px 3px 0px #212121;
 	transform: translateY(2px);
 }
 
@@ -105,45 +108,45 @@ body, html{
 
 .first .buttons:nth-child(2){
 	background-color: #000;
-	box-shadow: 0px 5px 0px #000;
+	box-shadow: -5px 5px 0px #000;
 }
 
 .first .buttons:nth-child(2):active{
 	background-color: #000;
-	box-shadow: 0px 3px 0px #000;
+	box-shadow: -3px 3px 0px #000;
 	transform: translateY(2px);
 }
 
 .first .buttons:nth-child(3){
 	background-color: #000;
-	box-shadow: 0px 5px 0px #000;
+	box-shadow: -5px 5px 0px #000;
 }
 
 .first .buttons:nth-child(3):active{
 	background-color: #000;
-	box-shadow: 0px 3px 0px #000;
+	box-shadow: -3px 3px 0px #000;
 	transform: translateY(2px);
 }
 
 .first .buttons:first-child{
 	background-color: #E30000;
-	box-shadow: 0px 5px 0px #A80000;
+	box-shadow: -5px 5px 0px #A80000;
 }
 
 .first .buttons:first-child:active{
 	background-color: #E30000;
-	box-shadow: 0px 3px 0px #A80000;
+	box-shadow: -3px 3px 0px #A80000;
 	transform: translateY(2px);
 }
 
 .first .buttons:last-child{
 	background-color: #E30000;
-	box-shadow: 0px 5px 0px #A80000;
+	box-shadow: -5px 5px 0px #A80000;
 }
 
 .first .buttons:last-child:active{
 	background-color: #E30000;
-	box-shadow: 0px 3px 0px #A80000;
+	box-shadow: -3px 3px 0px #A80000;
 	transform: translateY(2px);
 }
 
@@ -153,12 +156,12 @@ body, html{
 }
 .fifth .buttons{
 	background-color: black;
-	box-shadow: 0px 5px 0px #000;
+	box-shadow: -5px 5px 0px #000;
 }
 
 .fifth .buttons:active{
 	background-color: black;
-	box-shadow: 0px 3px 0px #000;
+	box-shadow: -3px 3px 0px #000;
 	transform: translateY(2px);
 }
 
@@ -168,11 +171,11 @@ body, html{
 
 .sixth .buttons{
 	background-color: black;
-	box-shadow: 0px 5px 0px #000;
+	box-shadow: -5px 5px 0px #000;
 }
 
 .sixth .buttons:active{
 	background-color: black;
-	box-shadow: 0px 3px 0px #000;
+	box-shadow: -3px 3px 0px #000;
 	transform: translateY(2px);
 }

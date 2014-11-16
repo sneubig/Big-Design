@@ -21,7 +21,7 @@
 	<div class="keypad">
 		<div class="first column">
 			<div class="buttons"><span>OFF</span></div>
-			<div class="buttons"><span>%</span></div>
+			<div class="buttons"><span class="operator"> % </span></div>
 			<div class="buttons"><span>Root</span></div>
 			<div class="buttons"><span>ON/C</span></div>
 		</div>
@@ -44,17 +44,17 @@
 			<div class="buttons"><span>9</span></div>
 			<div class="buttons"><span>6</span></div>
 			<div class="buttons"><span>3</span></div>
-			<div class="buttons"><span>=</span></div>
+			<div class="buttons"><span class="eval">=</span></div>
 		</div>
 		
 		<div class="fifth column">
-			<div class="buttons"><span>X</span></div>
-			<div class="buttons"><span>-</span></div>
-			<div class="buttons"><span>+</span></div>
+			<div class="buttons"><span class="operator"> X </span></div>
+			<div class="buttons"><span class="operator"> - </span></div>
+			<div class="buttons"><span class="operator"> + </span></div>
 		</div>
 		
 		<div class="sixth column">
-			<div class="buttons"><span>/</span></div>
+			<div class="buttons"><span class="operator"> / </span></div>
 			<div class="buttons"><span>Mrc</span></div>
 			<div class="buttons"><span>M-</span></div>
 			<div class="buttons"><span>M+</span></div>
@@ -68,30 +68,53 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 <script>
+	var keys = document.querySelectorAll('.buttons span');
+	var operators = ['+', '-', 'x', '÷'];
+	var decimalAdded = false;
+
+	var input = document.querySelector('.inner-screen');
+
+
 
 	$('.buttons').on('click', function(){
+
 		// console.log(this);
 		var activeButton = $(this).addClass('active');
+		var removeActive = $('.active').removeClass('active');
 		var activeSpan = $(activeButton).find('span');
 		var activeValue = $(activeSpan).text();
-	
-	
-		console.log(activeSpan);
-		console.log(activeValue);
 
+		// console.log(activeSpan);
+		// console.log(activeValue);
+
+		// Makes the button that is clicked active
 		activeButton;
 
-		if(parseInt(activeValue)){
+		// Removes active class from all buttons, to reset
+		removeActive;
+
+
+		if(parseInt(activeValue) || activeValue == 0){
 			$('.inner-screen').append('<span>' + activeValue + '</span>');
-		} else {
-			console.log("No Value");
+
+		} else{
+
+			console.log(activeValue);
 		}
-	});
-
-	$('.first.buttons:last-child').on('click', function(e){
-			$('.inner-screen').html('');
 
 	});
+
+	var find = $('.first').find('.buttons:last-child');
+	var search = $('.inner-screen')
+
+	$('.first').on('click', function(){
+		$(find).on('click', function(){
+			return search.remove('span');
+		});
+	});
+
+
+
 
 
 
