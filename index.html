@@ -9,6 +9,7 @@
 <div class="calc-container">
 	<!--	Screen -->
 	<div class="screen">
+		<div class="buttons clear"><span>C</span></div>
 		<div class="outline">
 			<div class="inner-screen">
 
@@ -19,12 +20,9 @@
 	<!--	Keypad -->
 
 	<div class="keypad">
-		<div class="first column">
-			<div class="buttons"><span>OFF</span></div>
-			<div class="buttons"><span class="operator"> % </span></div>
-			<div class="buttons"><span>Root</span></div>
-			<div class="buttons"><span>ON/C</span></div>
-		</div>
+	<!-- 	<div class="first column">
+			
+		</div> -->
 		
 		<div class="second column">
 			<div class="buttons"><span>7</span></div>
@@ -48,17 +46,12 @@
 		</div>
 		
 		<div class="fifth column">
-			<div class="buttons"><span class="operator"> X </span></div>
-			<div class="buttons"><span class="operator"> - </span></div>
 			<div class="buttons"><span class="operator"> + </span></div>
+			<div class="buttons"><span class="operator"> - </span></div>
+			<div class="buttons"><span class="operator"> X </span></div>
+			<div class="buttons"><span class="operator"> / </span></div>
 		</div>
 		
-		<div class="sixth column">
-			<div class="buttons"><span class="operator"> / </span></div>
-			<div class="buttons"><span>Mrc</span></div>
-			<div class="buttons"><span>M-</span></div>
-			<div class="buttons"><span>M+</span></div>
-		</div>
 	</div>
 	
 
@@ -108,60 +101,8 @@
 
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="script.js" type="text/javascript"></script>
 
-<script>
-	var keys = document.querySelectorAll('.buttons span');
-	var operators = ['+', '-', 'x', '÷'];
-	var decimalAdded = false;
-
-	var input = document.querySelector('.inner-screen');
-
-
-
-	$('.buttons').on('click', function(){
-
-		// console.log(this);
-		var activeButton = $(this).addClass('active');
-		var removeActive = $('.active').removeClass('active');
-		var activeSpan = $(activeButton).find('span');
-		var activeValue = $(activeSpan).text();
-
-		// console.log(activeSpan);
-		// console.log(activeValue);
-
-		// Makes the button that is clicked active
-		activeButton;
-
-		// Removes active class from all buttons, to reset
-		removeActive;
-
-
-		if(parseInt(activeValue) || activeValue == 0){
-			$('.inner-screen').append('<span>' + activeValue + '</span>');
-
-		} else{
-
-			console.log(activeValue);
-		}
-
-	});
-
-	var find = $('.first').find('.buttons:last-child');
-	var search = $('.inner-screen')
-
-	$('.first').on('click', function(){
-		$(find).on('click', function(){
-			return search.remove('span');
-		});
-	});
-
-
-
-
-
-
-
-</script>
 
 </body>
 </html>
