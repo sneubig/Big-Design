@@ -62,6 +62,7 @@ $(document).ready(function(){
 		$('.cursor').hide();
 	});
 
+
 	$('.mousepad').on('mousemove', function(event){
 		 var position = $(this).position();
      var offset = $(this).offset();
@@ -71,6 +72,7 @@ $(document).ready(function(){
      var percentFromLeft = (x / 102) * 362;
      var percentFromTop = (y / 48) * 180;
 
+    // When mouseover the mousepad, the cursor will move the same percentage over the lap-screen
      $('.cursor').css({
      		// 'position': 'relative',
      		'left': percentFromLeft,
@@ -96,25 +98,15 @@ $(document).ready(function(){
 
 				});
 
-	// When I mouseover the mousepad, I want the cursor to move the same percentage over the lap-screen
-		$('')
-
-
 	// To Find Percentage Height and Width of the Laptop Screen
-		$('.lap-screen').on('mouseenter', function(){
-		$('.cursor').show();
-	});
+		// $('.lap-screen').on('mouseenter', function(){
+		// 	$('.cursor').show();
+		// });
 
-	$('.lap-screen').on('mouseleave', function(){
-		$('.cursor').hide();
-	});
+		// $('.lap-screen').on('mouseleave', function(){
+		// 	$('.cursor').hide();
+		// });
 
-	// Zoom in to Laptop
-
-	// $('.lap-container').on(‘click’, function(event) {
- //    $(this).zoomTo({targetsize: 0.75, duration:600});
- //    event.stopPropagation();
- //  });
 
 	
 
