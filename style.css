@@ -308,11 +308,11 @@ body, html{
 /******* Container ********/
 
 .lap-container{
-	width: 40%;
-	height: 60%;
+	width: 30%;
+	height: 50%;
 	position: absolute;
-	top: 10%;
-	left: 10%;
+	top: 20%;
+	left: 30%;
 }
 
 /******* Laptop Screen ********/

@@ -109,6 +109,13 @@ $(document).ready(function(){
 		$('.cursor').hide();
 	});
 
+	// Zoom in to Laptop
+
+	// $('.lap-container').on(‘click’, function(event) {
+ //    $(this).zoomTo({targetsize: 0.75, duration:600});
+ //    event.stopPropagation();
+ //  });
+
 	
 
 });
