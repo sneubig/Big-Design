@@ -112,6 +112,9 @@ $(document).ready(function(){
 	// Toggle Lamp On/Off
 	$('.switch').on('click', function(){
 			$('.bulb').toggleClass('on');
+			$('.shade').toggleClass('on');
+
+			$('.light-beam').toggle();
 
 	});
 
