@@ -202,7 +202,7 @@ body, html{
 	height: 50%;
 	position: absolute;
 	right: 10%;
-	top: 5%;
+	top: -15%;
 }
 
 /******* Base ********/
@@ -210,21 +210,32 @@ body, html{
 .shade{
 	width: 100px;
 	height: 0;
-	border-bottom: 100px solid rgba(255,255,255, .5);
-	border-left: 10px solid transparent;
-	border-right: 10px solid transparent;
-	z-index: 5;
+	position: relative;
+	left: 10%;
+	top: 50%;
+	border-bottom: 100px solid rgba(0,0,0, .5);
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	z-index: 2;
+	border-radius: 10%;
+	transform: skewX(135deg);
 }
 
 .bulb{
-	width: 10%;
-	height: 10%;
-	background-color: yellow;
+	width: 2.5em;
+	height: 3em;
+	background-color: white;
+	border: 1px solid white;
 	border-radius: 100%;
 	position: relative;
-	left: 35%;
-	top: -15%;
-	z-index: 3;
+	left: 20%;
+	top: 25%;
+	z-index: 5;
+	transform: skewX(-30deg);
+}
+
+.on{
+	background-color: yellow;
 }
 
 .stand{
@@ -237,8 +248,19 @@ body, html{
 	z-index: 3;
 }
 
+.stand2{
+	width: 5%;
+	height: 20%;
+	background-color: #000;
+	position: relative;
+	left: 30%;
+	top: 10%;
+	z-index: 3;
+	transform: skewX(40deg);
+}
+
 .base{
-	width: 60%;
+	width: 70%;
 	height: 10%;
 	background-color: #eee;
 	border-radius: 100%;
@@ -250,7 +272,7 @@ body, html{
 }
 
 .base1{
-	width: 60%;
+	width: 70%;
 	height: 10%;
 	background-color: #eee;
 	border-radius: 100%;
@@ -261,15 +283,19 @@ body, html{
 }
 
 .switch{
-	width: 20%;
-	height: 20%;
+	width: 25%;
+	height: 30%;
 	background-color: black;
 	position: relative;
-	left: 20%;
+	left: 15%;
 	top: 50%;
 	border-radius: 100%;
+	border: 1px solid #aaa;
 	transform: skewX(25deg);
+	box-shadow: -5px 5px 0px #000;
 }
+
+
 
 
 /*********** Clock *************/

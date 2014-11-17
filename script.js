@@ -106,6 +106,14 @@ $(document).ready(function(){
 		// $('.lap-screen').on('mouseleave', function(){
 		// 	$('.cursor').hide();
 		// });
+	
+
+
+	// Toggle Lamp On/Off
+	$('.switch').on('click', function(){
+			$('.bulb').toggleClass('on');
+
+	});
 
 
 	
