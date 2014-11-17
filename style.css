@@ -353,10 +353,34 @@ body, html{
 .lap-bottom{
 	width: 100%;
 	height: 50%;
-	background-color: blue;
+	background-color: silver;
 	border-radius: 10%;
 	position: relative;
 	border: 1px solid black;
+}
+
+.lap-keyboard{
+	width: 80%;
+	height: 60%;
+	background-color: white;
+	border: 1px solid black;
+	border-radius: 2%;
+	margin: 2% auto;
+}
+
+.lap-buttons{
+	width: 100%;
+	height: 100%;
+	margin: 1px;
+}
+
+.lap-buttons span{
+	width: 5em;
+	height: 2em;
+	border: 1px solid silver;
+	color: white;
+	margin: 1px;
+	background-color: #000;
 }
 
 .mousepad{
