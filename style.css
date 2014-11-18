@@ -217,7 +217,7 @@ body, html{
 	top: 50%;
 	border-bottom: 100px solid rgba(0,0,0, .5);
 	border-left: 20px solid transparent;
-	border-right: 20px solid transparent;
+	border-right: 50px solid transparent;
 	z-index: 2;
 	border-radius: 10%;
 	transform: skewX(135deg);
@@ -524,18 +524,14 @@ body, html{
 }
 
 #stephen{
-  width: 10%;
+  width: 20%;
   position: relative;
-  top: 150px;
-  left: 125px;
   z-index: 3;
 }
 
 #last_name{
-  width: 8%;
+  width: 16%;
   position: relative;
-  top: 156px;
-  left: 120px;
   z-index: 3;
 }
 
