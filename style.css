@@ -330,7 +330,6 @@ body, html{
 	width: 90%;
 	height: 80%;
 	background-color: #fff;
-	background-size: cover;
 	border-radius: 2%;
 	position: relative;
 	left: 5%;
@@ -339,9 +338,11 @@ body, html{
 }
 
 .searchbar{
-	width: ;
-	height: 20%;
-	border: 1px solid black;
+	width: 40%;
+	height: 10%;
+	position: absolute;
+	left: 20%;
+	top: 50%;
 }
 
 .cursor{

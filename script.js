@@ -132,7 +132,38 @@ $(document).ready(function(){
 
 
 // var link = document.getElementById('searchbar');
-// var input = $('#searchbar'.append('<input type="text" value="some text">');
+
+
+
+$('form.searchbar').on('submit', function(event){
+	event.preventDefault();
+	var searchbar = "https://www.google.com/#q=" + $("input[type='text']").val();
+	window.location.href = searchbar;
+
+	// $(searchbar).submit(function(event){
+	// 	event.preventDefault();
+	// 	window.location.href = searchbar;
+	// });
+		// $('.lap-screen').css({
+		// 	'background-image': 'url(' + searchbar + ')'
+		// });
+	// })
+	
+	// document.getElementsByClassName("lap-screen")[0] = searchbar;
+	// return true;
+	// console.log(searchbar);
+	// $(searchbar).submit(function(event){
+	// 	event.preventDefault();
+	// 	window.location.href = searchbar;
+	// })
+	// $(searchbar).submit();
+})
+
+
+
+// $('#submit-button').on('click', function(){
+// 	return
+// });
 
 // $('.searchbar').append("<a href='http://www.google.com/' + input + '</a>');
 
