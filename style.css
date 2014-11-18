@@ -337,6 +337,46 @@ body, html{
 	border: 1px solid #000;
 }
 
+.browser{
+	width: 100%;
+	height: 10%;
+	border-bottom: 1px solid black;
+	background-color: #aaa;
+}
+
+.browser-search{
+	width: 50%;
+	height: 60%;
+	border: 1px solid black;
+	display: inline-block;
+	position: relative;
+	left: 15%;
+	background-color: #fff;
+	font-size: .5em;
+	padding-left: 3%;
+}
+
+.browser-button{
+	width: .2em;
+	height: .2em;
+	border: 1px solid black;
+	border-radius: 100%;
+	display: inline-block;
+	margin-left: .3em;
+	position: relative;
+}
+
+.browser-button:first-child{
+	background-color: red;
+}
+
+.browser-button:nth-child(2){
+	background-color: yellow;
+}
+
+.browser-button:nth-child(3){
+	background-color: green;
+}
 .searchbar{
 	width: 40%;
 	height: 10%;
@@ -354,6 +394,13 @@ body, html{
 	transform: skewX(10deg);
 	display: none;
 	position: relative;
+}
+
+.scrollbar{
+	width: 2%;
+	height: 89%;
+	border: 1px solid black;
+	float: right;
 }
 
 /******* Laptop Keyboard ********/
