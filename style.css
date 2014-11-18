@@ -329,13 +329,19 @@ body, html{
 .lap-screen{
 	width: 90%;
 	height: 80%;
-	background-image: url(http://mohsinkhawas.files.wordpress.com/2010/08/screen-shot-2010-08-15-at-10-00-17-pm.png);
+	background-color: #fff;
 	background-size: cover;
 	border-radius: 2%;
 	position: relative;
 	left: 5%;
 	top: 10%;
 	border: 1px solid #000;
+}
+
+.searchbar{
+	width: ;
+	height: 20%;
+	border: 1px solid black;
 }
 
 .cursor{
@@ -347,7 +353,6 @@ body, html{
 	transform: skewX(10deg);
 	display: none;
 	position: relative;
-
 }
 
 /******* Laptop Keyboard ********/

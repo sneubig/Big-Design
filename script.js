@@ -117,6 +117,28 @@ $(document).ready(function(){
 	});
 
 
-	
+// var path = "M9.7,89.4c24.3-9.8,44.7-28.9,56-52.6c1.7-3.6,3.3-7.5,3.4-11.6
+//                     s-1.7-8.3-5.3-10.3c-2.2-1.2-4.9-1.4-7.4-1.6c-3.9-0.2-8.2-0.4-11.3,2.1c-1.6,1.3-2.7,3.1-3.4,5.1c-3.6,9.2-0.1,20.7,8.1,26.2
+//                                  c3.1,2.1,6.6,3.4,9.8,5.3c11.2,6.7,16.6,21.9,12,34.2c-8.3,6.3-20.7,5.8-29.4,0.1C33.6,80.6,28.3,70.4,27.1,60
+//                                  c9.7,0.1,19.4,3.3,27.3,9";
+
+// var pencil = $('.pencil-container');
+
+//   $('.point').on('click', function(){
+
+//   });	
+
+// });
+
+
+// var link = document.getElementById('searchbar');
+// var input = $('#searchbar'.append('<input type="text" value="some text">');
+
+// $('.searchbar').append("<a href='http://www.google.com/' + input + '</a>');
+
+// var parent = document.getElementById('searchbar');
+// var sibling = $
+// var text = document.createTextNode('new text');
+// parent.insertBefore(text, sibling);
 
 });
