@@ -377,12 +377,20 @@ body, html{
 .browser-button:nth-child(3){
 	background-color: green;
 }
+
 .searchbar{
 	width: 40%;
 	height: 10%;
 	position: absolute;
 	left: 20%;
 	top: 50%;
+}
+
+#submit-button{
+	height: 50%;
+	position: relative;
+	left: 40%;
+
 }
 
 .cursor{
