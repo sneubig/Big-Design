@@ -69,8 +69,8 @@ $(document).ready(function(){
      var x = event.pageX - (offset.left);
      var y = event.pageY - (offset.top);
      // Need to multiply percent variables by the height and width of the lap-screen instead of 100
-     var percentFromLeft = (x / 102) * 362;
-     var percentFromTop = (y / 48) * 180;
+     var percentFromLeft = (x / 102) * 342;
+     var percentFromTop = (y / 48) * 150;
 
     // When mouseover the mousepad, the cursor will move the same percentage over the lap-screen
      $('.cursor').css({
@@ -80,21 +80,26 @@ $(document).ready(function(){
      });
 
      // Displays the x and y coordinate percentages on mousemove of the mousepad
-		// $('.lap-screen').text( "pageX: " + percentFromLeft + ", pageY: " + percentFromTop );
+		$('.table').text( "pageX: " + percentFromLeft + ", pageY: " + percentFromTop );
+
+		var submitFromLeft = (x / 118) * 342;
+		var submitFromTop = (y / 101) * 150;
+
+
 
 	});
 
-		$('.lap-screen').on('mousemove', function(event){
-		 			var position = $(this).position();
-     			var offset = $(this).offset();
-     			var x = event.pageX - (offset.left);
-     			var y = event.pageY - (offset.top);
-     			var percentFromLeft = x / 362 * 100;
-     			var percentFromTop = y / 180 * 100;
+	$('.lap-screen').on('mousemove', function(event){
+	 			var position = $(this).position();
+   			var offset = $(this).offset();
+   			var x = event.pageX - (offset.left);
+   			var y = event.pageY - (offset.top);
+   			var percentFromLeft = x / 342 * 100;
+   			var percentFromTop = y / 150 * 100;
 
-			     // Displays the x and y coordinate percentages on mousemove on the lap-screen
-			     // $('.lap-bottom').text("pageX: " + x + ", pageY: " + y );
-				});
+		     // Displays the x and y coordinate percentages on mousemove on the lap-screen
+		     // $('.lap-bottom').text("pageX: " + x + ", pageY: " + y );
+			});
 
 
 		$('form.searchbar').on('submit', function(event){
