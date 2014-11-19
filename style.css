@@ -326,6 +326,16 @@ body, html{
 	border: 1px solid #000;
 }
 
+.camera{
+	width: .5em;
+	height: .5em;
+	border-radius: 100%;
+	background-color: #000;
+	position: absolute;
+	top: 5%;
+	left: 50%;
+}
+
 .lap-screen{
 	width: 90%;
 	height: 80%;
@@ -387,7 +397,7 @@ body, html{
 }
 
 #submit-button{
-	height: 50%;
+	height: 100%;
 	position: relative;
 	left: 40%;
 
@@ -409,6 +419,14 @@ body, html{
 	height: 89%;
 	border: 1px solid black;
 	float: right;
+}
+
+.macbook-type{
+	font-family: 'lucida Sans';
+	font-size: .8em;
+	position: absolute;
+	top: 92%;
+	left: 40%;
 }
 
 /******* Laptop Keyboard ********/
@@ -460,6 +478,11 @@ body, html{
 	width: 6em;
 }
 
+.lap-keys:nth-child(11){
+	background-image: url(http://farm6.static.flickr.com/5047/5302198957_ec2f58b01e_m.jpg);
+	background-size: cover;
+}
+
 .mousepad{
 	width: 25%;
 	height: 25%;
@@ -472,9 +495,9 @@ body, html{
 }
 
 
-.pencil-container{
+#pencil-container{
 	width: 3%;
-	height: 70%;
+	height: 15%;
   transform: skewX(-25deg);
   position: relative;
   left: 80%;
@@ -492,7 +515,7 @@ body, html{
 }
 
 .pencil{
-  height: 15%;
+  height:75%;
   width: 40%;
   background-color: yellow;
 }

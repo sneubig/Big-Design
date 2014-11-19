@@ -94,9 +94,14 @@ $(document).ready(function(){
 
 			     // Displays the x and y coordinate percentages on mousemove on the lap-screen
 			     // $('.lap-bottom').text("pageX: " + x + ", pageY: " + y );
-
-
 				});
+
+
+		$('form.searchbar').on('submit', function(event){
+			event.preventDefault();
+			var searchbar = "https://www.google.com/#q=" + $("input[type='text']").val();
+			window.location.href = searchbar;
+		});
 
 	// To Find Percentage Height and Width of the Laptop Screen
 		// $('.lap-screen').on('mouseenter', function(){
@@ -135,41 +140,28 @@ $(document).ready(function(){
 
 
 
-$('form.searchbar').on('submit', function(event){
-	event.preventDefault();
-	var searchbar = "https://www.google.com/#q=" + $("input[type='text']").val();
-	window.location.href = searchbar;
+			var path = "M9.7,89.4c24.3-9.8,44.7-28.9,56-52.6c1.7-3.6,3.3-7.5,3.4-11.6s-1.7-8.3-5.3-10.3c-2.2-1.2-4.9-1.4-7.4-1.6c-3.9-0.2-8.2-0.4-11.3,2.1c-1.6,1.3-2.7,3.1-3.4,5.1c-3.6,9.2-0.1,20.7,8.1,26.2c3.1,2.1,6.6,3.4,9.8,5.3c11.2,6.7,16.6,21.9,12,34.2c-8.3,6.3-20.7,5.8-29.4,0.1C33.6,80.6,28.3,70.4,27.1,60c9.7,0.1,19.4,3.3,27.3,9 M69.8,89.5c12.7,1.5,24.5-8.3,29.5-20.1c5-11.7,4.8-25,4.6-37.7c-2.4-1.7-6-0.6-7.9,1.6c-2,2.2-2.7,5.2-3.3,8.1c-2,9.5-2.9,19.3-2.7,29c0.1,3.4,0.3,7,1.8,10.1c2.9,6.1,10.8,9.3,17.2,6.9c6.3-2.4,10.1-10.1,8.2-16.6c-6.1,1.8-5.7,12.4,0.3,14.3c6,2,12.6-5,10.9-11.1c2.2,10.9,4.3,21.8,6.5,32.7c-4.2-13.2-5.8-27.2-4.6-40.9c2.7,0,5.3,0.1,8,0.1c2.9,5.6,2.5,12.9-1.1,18.2c6.2,1.1,9.9-6.7,11.1-13c2.7-14.4,4-29,4-43.7c-3.9-0.5-6,4.4-6.6,8.4c-2.1,16.5,0.5,33.6,7.4,48.8c-2-6.8-2.9-16,3.4-19.1c4.2-2.1,9.6,0.4,12.1,4.4c2.6,4,2.9,8.9,2.7,13.6c4.2,1,8.8,0,12.3-2.6c0-4.2,0-8.3,0-12.5c-4.4,0.6-4.8,6.7-4,11.1c5,0,10,0,15,0c0.5-3.2,1.1-6.4,1.6-9.5c-1.1,3.8-0.2,8.2,2.5,11.2c0.2-8.4,9.8-15.1,17.8-12.5c2.8,4,4.7,8.7,5.5,13.6c2.3,0,4.6,0,6.9,0";
+				pathAnimator = new PathAnimator( path ),	// initiate a new pathAnimator object
+				objToAnimate = document.getElementById('pencil-container'),	// The object that will move along the path
+				speed = 20,	 		// seconds that will take going through the whole path
+				reverse = false,	// go back of forward along the path
+				startOffset = 0		// between 0% to 100%
+				
+			pathAnimator.start( speed, step, reverse, startOffset);
 
-	// $(searchbar).submit(function(event){
-	// 	event.preventDefault();
-	// 	window.location.href = searchbar;
-	// });
-		// $('.lap-screen').css({
-		// 	'background-image': 'url(' + searchbar + ')'
-		// });
-	// })
-	
-	// document.getElementsByClassName("lap-screen")[0] = searchbar;
-	// return true;
-	// console.log(searchbar);
-	// $(searchbar).submit(function(event){
-	// 	event.preventDefault();
-	// 	window.location.href = searchbar;
-	// })
-	// $(searchbar).submit();
-})
+			function step( point ){
+				// do something every "frame" with: point.x, point.y & angle
+				objToAnimate.style.cssText = "top:" + point.y + "px;" +
+											"left:" + point.x + "px;";
+			}
+
+			function finish(){
+				console.log("finished!");
+			}
 
 
 
-// $('#submit-button').on('click', function(){
-// 	return
-// });
 
-// $('.searchbar').append("<a href='http://www.google.com/' + input + '</a>');
 
-// var parent = document.getElementById('searchbar');
-// var sibling = $
-// var text = document.createTextNode('new text');
-// parent.insertBefore(text, sibling);
 
 });
