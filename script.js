@@ -1,35 +1,106 @@
 $(document).ready(function(){
-	$('.buttons').on('click', function(){
+	// $('.buttons').on('click', function(){
+
 
 		// console.log(this);
-		var activeButton = $(this).addClass('active');
-		// var removeActive = $('.active').removeClass('active');
+		var activeButton = $(this).toggleClass('active');
 		var activeSpan = $(activeButton).find('span');
 		var activeValue = $(activeSpan).text();
 
 		var input = document.querySelector('.inner-screen');
-		var inputVal = input.innerHTML;
 
-		// Makes the button that is clicked active
-		activeButton
+		// var inputValue = '';
+		// var num = inputValue << activeValue;
 
-		// If clear button is pressed, erase everything
-		if(activeValue == 'C'){
-			input.innerHTML = '';
-			console.log(input.innerHTML);
+		var number = '';
+		var newNumber = '';
+		var operator = '';
+		var totalVal = '';
+
+	$('.numbers').on('click', function(){
+		number += $(this).text();
+		totalVal = number;
+		console.log(number);
+		console.log('total value: ' + totalVal);
+		$('.inner-screen').html(totalVal);
+	});
+
+	function add(a, b){
+
+	}
+	$('.operators').on('click', function(){
+		operator = $(this).text();
+		newNumber = totalVal;
+		number = '';
+		console.log("new number: " + newNumber)
+		console.log("number: " + number)
+	});
+
+	$('.clear').on('click', function(){
+		number = '';
+		newNumber = '';
+		operator = '';
+		totalVal = ''
+		console.log('Clear Button Worked!');
+		$('.inner-screen').text('');
+	});
+
+	$('.eval').on('click', function(){
+		number = totalVal; 
+		var result = '';
+
+		if (operator === "+"){
+			result = newNumber + number;
+			console.log(result);
+		} else if (operator === "-"){
+			result = newNumber - number;
+			console.log(result);
+		} else if (operator === "X"){
+			result = newNumber * number;
+			console.log(result);
+		} else if (operator === "/"){
+			result = newNumber / number;
+			console.log(result);
 		}
 
-		if(activeValue == '+'){
-			console.log(activeValue + "hey");
-			input.innerHTML += activeValue;
-		}
-
-		if(parseInt(activeValue) || activeValue == 0){
-			$('.inner-screen').append('<span>' + activeValue + '</span>');
-			console.log(activeValue);
-		} 
+		$('.inner-screen').text(result);
+		// number = '';
+		// newNumber = '';
 
 	});
+	
+
+
+
+
+		// var number = '';
+		// var newnumber = '';
+		// var operator = '';
+		// var total = $('.eval');
+
+		// Makes the button that is clicked active
+		// activeButton;
+
+		// // If clear button is pressed, erase everything
+		// if(parseInt(activeValue) || activeValue == 0){
+		// 	$('.inner-screen').append('<span>' + input.innerHTML + '</span>');
+		// 	// console.log(activeValue);
+		// 	console.log(num);
+		// }
+
+		// if(activeValue == 'C'){
+		// 	input.innerHTML = '';
+		// 	$('.buttons').removeClass('active');
+		// 	console.log(input.innerHTML);
+		// } else if( activeButton == document.getElementById('plus')){
+		// 	console.log('+');
+		// } else {
+		// 	console.log('fail!');
+		// }
+
+		
+
+	// });
 
 
 	// var addActiveClass = function(input1, input2){
@@ -80,12 +151,7 @@ $(document).ready(function(){
      });
 
      // Displays the x and y coordinate percentages on mousemove of the mousepad
-		$('.table').text( "pageX: " + percentFromLeft + ", pageY: " + percentFromTop );
-
-		var submitFromLeft = (x / 118) * 342;
-		var submitFromTop = (y / 101) * 150;
-
-
+		// $('.table').text( "pageX: " + percentFromLeft + ", pageY: " + percentFromTop );
 
 	});
 
@@ -148,7 +214,7 @@ $(document).ready(function(){
 			var path = "M9.7,89.4c24.3-9.8,44.7-28.9,56-52.6c1.7-3.6,3.3-7.5,3.4-11.6s-1.7-8.3-5.3-10.3c-2.2-1.2-4.9-1.4-7.4-1.6c-3.9-0.2-8.2-0.4-11.3,2.1c-1.6,1.3-2.7,3.1-3.4,5.1c-3.6,9.2-0.1,20.7,8.1,26.2c3.1,2.1,6.6,3.4,9.8,5.3c11.2,6.7,16.6,21.9,12,34.2c-8.3,6.3-20.7,5.8-29.4,0.1C33.6,80.6,28.3,70.4,27.1,60c9.7,0.1,19.4,3.3,27.3,9 M69.8,89.5c12.7,1.5,24.5-8.3,29.5-20.1c5-11.7,4.8-25,4.6-37.7c-2.4-1.7-6-0.6-7.9,1.6c-2,2.2-2.7,5.2-3.3,8.1c-2,9.5-2.9,19.3-2.7,29c0.1,3.4,0.3,7,1.8,10.1c2.9,6.1,10.8,9.3,17.2,6.9c6.3-2.4,10.1-10.1,8.2-16.6c-6.1,1.8-5.7,12.4,0.3,14.3c6,2,12.6-5,10.9-11.1c2.2,10.9,4.3,21.8,6.5,32.7c-4.2-13.2-5.8-27.2-4.6-40.9c2.7,0,5.3,0.1,8,0.1c2.9,5.6,2.5,12.9-1.1,18.2c6.2,1.1,9.9-6.7,11.1-13c2.7-14.4,4-29,4-43.7c-3.9-0.5-6,4.4-6.6,8.4c-2.1,16.5,0.5,33.6,7.4,48.8c-2-6.8-2.9-16,3.4-19.1c4.2-2.1,9.6,0.4,12.1,4.4c2.6,4,2.9,8.9,2.7,13.6c4.2,1,8.8,0,12.3-2.6c0-4.2,0-8.3,0-12.5c-4.4,0.6-4.8,6.7-4,11.1c5,0,10,0,15,0c0.5-3.2,1.1-6.4,1.6-9.5c-1.1,3.8-0.2,8.2,2.5,11.2c0.2-8.4,9.8-15.1,17.8-12.5c2.8,4,4.7,8.7,5.5,13.6c2.3,0,4.6,0,6.9,0 M74.3,74.5c23.1-17.1,46.3-34.2,69.4-51.3";
 				pathAnimator = new PathAnimator( path ),	// initiate a new pathAnimator object
 				objToAnimate = document.getElementById('pencil-container'),	// The object that will move along the path
-				speed = 15,	 		// seconds that will take going through the whole path
+				speed = 17,	 		// seconds that will take going through the whole path
 				reverse = false,	// go back of forward along the path
 				startOffset = 0		// between 0% to 100%
 				
