@@ -25,9 +25,6 @@ $(document).ready(function(){
 		$('.inner-screen').html(totalVal);
 	});
 
-	function add(a, b){
-
-	}
 	$('.operators').on('click', function(){
 		operator = $(this).text();
 		newNumber = totalVal;
