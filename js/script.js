@@ -21,19 +21,25 @@ $(document).ready(function(){
 
 	// Adds clicked numbers to the number variable and then sets value to totalVal
 	$('.numbers').on('click', function(){
-		number += $(this).text();
-		totalVal = number;
-		console.log(number);
-		console.log('total value: ' + totalVal);
-		$('.inner-screen').html(totalVal);
+		if(result == ''){
+			number += $(this).text();
+			$('.inner-screen').text(number);
+			result = number;
+			console.log("number: " + number);
+			console.log("result: " + result);
+			number = '';	
+		} else{
+			newNumber += $(this).text();
+			$('.inner-screen').text(newNumber);
+		}
+		
 	});
 
 	$('.operators').on('click', function(){
 		operator = $(this).text();
-		newNumber = totalVal;
-		number = '';
 		console.log("new number: " + newNumber)
 		console.log("number: " + number)
+		$('.inner-screen').text('');
 	});
 
 	// Resets all the variables when clear button is clicked
@@ -47,8 +53,6 @@ $(document).ready(function(){
 	});
 
 	$('.eval').on('click', function(){
-		number = totalVal; 
-		var result = '';
 
 		if (operator === "+"){
 			result = newNumber + number;
@@ -221,8 +225,8 @@ $(document).ready(function(){
 
 	function step( point ){
 		// Changes the top and left positioning of the path into percentages, to manipulate the size of the SVG path
-		objToAnimate.style.cssText = "top:" + (270 + point.y/100 * 40) + "px;" +
-										"left:" + (927 + point.x/100 * 30) + "px;"
+		objToAnimate.style.cssText = "top:" + (275 + point.y/100 * 40) + "px;" +
+										"left:" + (925 + point.x/100 * 30) + "px;"
 		 							;
 	}
 
@@ -236,8 +240,8 @@ $(document).ready(function(){
 	// console.log(length); // 865
 
 	// Find length of the welcome SVG Path
-	var path = document.querySelector('#welcome');
-	var length = path.getTotalLength();
+	// var path = document.querySelector('#welcome');
+	// var length = path.getTotalLength();
 	// console.log(length);
 	// 747
 

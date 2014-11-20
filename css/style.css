@@ -520,7 +520,7 @@ body, html{
 
 /************************ Paper **************************/
 .paper-container{
-  width: 35%;
+  width: 30%;
   height: 50%;
   position: absolute;
   left: 70%;
@@ -544,14 +544,14 @@ body, html{
 }
 
 .paper-side{
-  height: 62%;
+  height: 61.7%;
   width: 8%;
   background-color: white;
   border: 1px solid black;
   border-right: 1px solid pink;
   position: relative;
   right: 8%;
-  bottom: 22.5%;
+  bottom: 22.3%;
 }
 
 .holes{
@@ -704,5 +704,3 @@ body, html{
     stroke-dashoffset: 0;
   }
 }
-
-
