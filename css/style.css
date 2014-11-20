@@ -389,7 +389,7 @@ body, html{
 	color: red;
 }
 .google-logo span:nth-child(3){
-	color: yellow;
+	color: #ffee00;
 }
 .google-logo span:nth-child(4){
 	color: blue;
@@ -421,6 +421,8 @@ body, html{
 .searchbar [value="Google Search"]{
 	font-size: .5em;
 	font-weight: bold;
+	background-color: #eee;
+	margin-top: 5%;
 }
 
 #submit-button{
