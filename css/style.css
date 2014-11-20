@@ -271,7 +271,13 @@ body, html{
 	border-radius: 100%;
 	border: 1px solid #aaa;
 	transform: skewX(25deg);
-	box-shadow: -5px 5px 0px #000;
+	box-shadow: -3px 3px 0px #000;
+}
+
+.switch:active{
+	box-shadow: -1px 1px 0px #000;
+	transform: translateY(2px) skewX(25deg);
+
 }
 
 
@@ -440,6 +446,7 @@ body, html{
 
 .lap-keys:active{
 	box-shadow: -1px 1px 0px #212121;
+	transform: translateY(2px)
 }
 
 .lap-keys:nth-child(12){
@@ -524,22 +531,27 @@ body, html{
   width: 45%;
   height: 10%;
   background-color: #fff;
-  border-bottom: 1px solid blue;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
   position: relative;
   top: 40%;
   left: 0%;
   z-index: 10;
 }
 
+.paper-lines:first-child{
+	border-top: 1px solid black;
+}
+
 .paper-side{
-  height: 61%;
+  height: 62%;
   width: 8%;
   background-color: white;
   border: 1px solid black;
   border-right: 1px solid pink;
   position: relative;
   right: 8%;
-  bottom: 22%;
+  bottom: 22.5%;
 }
 
 .holes{
