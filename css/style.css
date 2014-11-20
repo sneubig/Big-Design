@@ -1,3 +1,5 @@
+$shadow: $#212121
+
 body, html{
 	width: 100%;
 	background-color: #fff;
@@ -175,8 +177,6 @@ body, html{
 	transform: translateY(2px);
 }
 
-
-
 .fifth{
 	position: relative;
 	
@@ -191,8 +191,6 @@ body, html{
 	box-shadow: -3px 3px 0px #000;
 	transform: translateY(2px);
 }
-
-
 
 
 /*********** Lamp *************/
@@ -210,16 +208,27 @@ body, html{
 /******* Base ********/
 
 .shade{
-	width: 100px;
+	width: 40%;
 	height: 0;
 	position: relative;
 	left: 10%;
 	top: 50%;
-	border-bottom: 100px solid rgba(0,0,0, .5);
+	border-bottom: 100px solid rgba(0,0,0,.7);
 	border-left: 20px solid transparent;
 	border-right: 50px solid transparent;
 	z-index: 2;
 	border-radius: 10%;
+	transform: skewX(135deg);
+}
+
+.shade-top{
+	width: 20%;
+	height: 5%;
+	background-color: rgba(0,0,0,.7);
+	position: relative;
+	top: 50%;
+	left: 35%;
+	border-radius: 20%;
 	transform: skewX(135deg);
 }
 
@@ -570,7 +579,23 @@ body, html{
 
 .neubig{
   stroke-width: 5px;
+  fill: white;
+  stroke: black;
+  stroke-dasharray: 865;
+  stroke-dashoffset: 865;
+  -webkit-animation: lastname 12s linear forwards;
 }
+
+@-webkit-keyframes lastname {
+  from {
+    stroke-dashoffset: 865;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
 
 @keyframes fun {
   from {
