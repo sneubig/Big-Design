@@ -119,10 +119,22 @@ $(document).ready(function(){
      		'top': percentFromTop 
      });
 
-     // Displays the x and y coordinate percentages on mousemove of the mousepad
+    // Displays the x and y coordinate percentages on mousemove of the mousepad
 		// $('.table').text( "pageX: " + percentFromLeft + ", pageY: " + percentFromTop );
 
 	});
+
+	$('.mousepad').on('click', function(){
+		console.log("working");
+		$('.mousepad-submit-button').on('click', function(event){
+			var searchbar = "https://www.google.com/#q=" + $("input[type='text']").val();
+			console.log("working");
+			event.preventDefault();
+			$('form.searchbar').submit();
+			window.location.href = searchbar;
+			
+		})
+	})
 
 	$('.lap-screen').on('mousemove', function(event){
 	 			var position = $(this).position();
@@ -132,9 +144,11 @@ $(document).ready(function(){
    			var percentFromLeft = x / 342 * 100;
    			var percentFromTop = y / 150 * 100;
 
+
 	     // Displays the x and y coordinate percentages on mousemove on the lap-screen
 	     // $('.lap-bottom').text("pageX: " + x + ", pageY: " + y );
 			});
+
 
 	// When submit the input from searchbar it will go to the google site 	
 	$('form.searchbar').on('submit', function(event){

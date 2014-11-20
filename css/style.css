@@ -503,6 +503,16 @@ body, html{
 	left: 37.5%;
 }
 
+.mousepad-submit-button{
+	width: 20%;
+	height: 18%;
+	background-color: yellow;
+	border: 1px solid black;
+	position: absolute;
+	left: 35%;
+	top: 55%;
+}
+
 
 #pencil-container{
 	width: 3%;
