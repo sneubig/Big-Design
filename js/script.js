@@ -18,6 +18,7 @@ $(document).ready(function(){
 	var newNumber = '';
 	var operator = '';
 	var totalVal = '';
+	var result = '';
 
 	// Adds clicked numbers to the number variable and then sets value to totalVal
 	$('.numbers').on('click', function(){
@@ -55,7 +56,7 @@ $(document).ready(function(){
 	$('.eval').on('click', function(){
 
 		if (operator === "+"){
-			result = newNumber + number;
+			result += newNumber;
 			console.log(result);
 		} else if (operator === "-"){
 			result = newNumber - number;
@@ -69,8 +70,8 @@ $(document).ready(function(){
 		}
 
 		$('.inner-screen').text(result);
-		// number = '';
-		// newNumber = '';
+		number = '';
+		newNumber = '';
 
 	});
 	
