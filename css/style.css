@@ -5,7 +5,7 @@ body, html{
 	background-color: #fff;
 }
 
-
+/************************ Table **************************/			
 .table{
 	width: 100%;
 	height: 70%;
@@ -16,6 +16,8 @@ body, html{
   border-top-right-radius: 7px;
   box-shadow: inset 0 -16px 0 0 rgba(114,72,34,0.4);
 }
+
+/************************ Calculator **************************/
 
 .calc-container{
 	width: 60%;
@@ -85,7 +87,7 @@ body, html{
 	font-size: 1em;
 }
 
-/******** Keypad ***********/
+/******** Calc Keypad ***********/
 
 .keypad{
 	width: 20%;
@@ -107,14 +109,6 @@ body, html{
 	height: 80%;
 	display: inline-block;
 	margin: 2% auto;
-}
-
-.first{
-	
-}
-
-.second{
-	margin-left: 5%;
 }
 
 .buttons{
@@ -144,56 +138,27 @@ body, html{
 	transform: translateY(4px);
 }
 
-.first .buttons:nth-child(2){
-	background-color: #000;
-	box-shadow: -5px 5px 0px #000;
+.first{
+	margin-left: 5%;
 }
 
-.first .buttons:nth-child(2):active{
-	background-color: #000;
-	box-shadow: -3px 3px 0px #000;
-	transform: translateY(2px);
-}
-
-.first .buttons:nth-child(3){
-	background-color: #000;
-	box-shadow: -5px 5px 0px #000;
-}
-
-.first .buttons:nth-child(3):active{
-	background-color: #000;
-	box-shadow: -3px 3px 0px #000;
-	transform: translateY(2px);
-}
-
-.first .buttons:first-child{
-	background-color: #E30000;
-	box-shadow: -5px 5px 0px #A80000;
-}
-
-.first .buttons:first-child:active{
-	background-color: #E30000;
-	box-shadow: -3px 3px 0px #A80000;
-	transform: translateY(2px);
-}
-
-.fifth{
+.fourth{
 	position: relative;
-	
 }
-.fifth .buttons{
+
+.fourth .buttons{
 	background-color: black;
 	box-shadow: -5px 5px 0px #000;
 }
 
-.fifth .buttons:active{
+.fourth .buttons:active{
 	background-color: black;
 	box-shadow: -3px 3px 0px #000;
 	transform: translateY(2px);
 }
 
 
-/*********** Lamp *************/
+/************************ Lamp **************************/
 	
 /******* Container ********/
 
@@ -202,7 +167,7 @@ body, html{
 	height: 50%;
 	position: absolute;
 	right: 10%;
-	top: -15%;
+	top: -25%;
 }
 
 /******* Base ********/
@@ -310,7 +275,7 @@ body, html{
 }
 
 
-/*********** Laptop *************/
+/************************ Laptop **************************/
 
 /******* Container ********/
 
@@ -427,7 +392,8 @@ body, html{
 	width: 2%;
 	height: 89%;
 	border: 1px solid black;
-	float: right;
+	position: absolute;
+	right: 0;
 }
 
 .macbook-type{
@@ -488,8 +454,6 @@ body, html{
 }
 
 .lap-keys:nth-child(11){
-	background-image: url(http://farm6.static.flickr.com/5047/5302198957_ec2f58b01e_m.jpg);
-	background-size: cover;
 }
 
 .mousepad{
@@ -512,7 +476,7 @@ body, html{
 	top: 55%;
 }
 
-
+/************************ Pencil **************************/
 #pencil-container{
 	width: 3%;
 	height: 15%;
@@ -546,8 +510,10 @@ body, html{
   width: 0;
 }
 
+
+/************************ Paper **************************/
 .paper-container{
-  width: 40%;
+  width: 35%;
   height: 50%;
   position: absolute;
   left: 70%;
@@ -555,15 +521,40 @@ body, html{
 }
 
 .paper-lines{
-  width: 60%;
-  height: 30%;
+  width: 45%;
+  height: 10%;
   background-color: #fff;
   border-bottom: 1px solid blue;
   position: relative;
+  top: 40%;
   left: 0%;
   z-index: 10;
 }
 
+.paper-side{
+  height: 61%;
+  width: 8%;
+  background-color: white;
+  border: 1px solid black;
+  border-right: 1px solid pink;
+  position: relative;
+  right: 8%;
+  bottom: 22%;
+}
+
+.holes{
+  width: .5em;
+  height: .5em;
+  background-color: #deb778;
+  border-radius: 100%;
+  border: 1px solid black;
+  margin-top: 3em;
+  position: relative;
+  left: 1em;
+  bottom: 1em;
+}
+
+/******* SVG Animation *********/
 #stephen{
   width: 50%;
   position: relative;
@@ -603,8 +594,6 @@ body, html{
     stroke-dashoffset: 0;
   }
 }
-
-
 
 @keyframes fun {
   from {
@@ -680,27 +669,6 @@ body, html{
     stroke-dashoffset: 0;
   }
 }
-.paper-side{
-  height: 105%;
-  width: 8%;
-  background-color: white;
-  border: 1px solid black;
-  border-right: 1px solid pink;
-  position: relative;
-  left: 11%;
-  bottom: 107%;
-}
 
-.holes{
-  width: .5em;
-  height: .5em;
-  background-color: #deb778;
-  border-radius: 100%;
-  border: 1px solid black;
-  margin-top: 2em;
-  position: relative;
-  left: .3em;
-  bottom: 1em;
-}
 
 
