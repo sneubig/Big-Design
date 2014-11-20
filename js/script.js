@@ -220,11 +220,7 @@ $(document).ready(function(){
 	pathAnimator.start( speed, step, reverse, startOffset);
 
 	function step( point ){
-		// do something every "frame" with: point.x, point.y & angle
-		// objToAnimate.style.cssText = "top:" + (150 + point.y/60 * 40) + "px;" +
-		// 							"left:" + (920 + point.x/100 * 83) + "px;"
-		// 							;
-
+		// Changes the top and left positioning of the path into percentages, to manipulate the size of the SVG path
 		objToAnimate.style.cssText = "top:" + (270 + point.y/100 * 40) + "px;" +
 										"left:" + (927 + point.x/100 * 30) + "px;"
 		 							;
@@ -235,8 +231,14 @@ $(document).ready(function(){
 	}
 
 	// Find the length of the Neubig SVG Path
-	var path = document.querySelector('.neubig');
-	var length = path.getTotalLength();
+	// var path = document.querySelector('.neubig');
+	// var length = path.getTotalLength();
 	// console.log(length); // 865
+
+	// Find length of the welcome SVG Path
+	var path = document.querySelector('#welcome');
+	var length = path.getTotalLength();
+	// console.log(length);
+	// 747
 
 });

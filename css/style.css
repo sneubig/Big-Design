@@ -31,7 +31,7 @@ body, html{
 
 .screen{
 	position: relative;
-	left: -4%;
+	left: -4.3%;
 	width: 20%;
 	min-width: 10em;
 	height: 10%;
@@ -670,5 +670,27 @@ body, html{
   }
 }
 
+#welcome-svg{
+	width: 60%;
+}
+
+#welcome{
+	stroke: #000;
+  stroke-width: 1px;
+  stroke-dasharray: 747;
+  stroke-dashoffset: 747;
+  animation: welcome 10s linear forwards;
+  -webkit-animation: welcome 10s linear forwards;
+  -webkit-animation-delay: 0s;
+}
+
+@-webkit-keyframes welcome {
+  from {
+    stroke-dashoffset: 747;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
 
 
