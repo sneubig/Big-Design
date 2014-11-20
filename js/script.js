@@ -132,7 +132,6 @@ $(document).ready(function(){
 			event.preventDefault();
 			$('form.searchbar').submit();
 			window.location.href = searchbar;
-			
 		})
 	})
 
