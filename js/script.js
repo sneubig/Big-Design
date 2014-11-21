@@ -1,4 +1,4 @@
-$(document).ready(function(){
+// $(document).ready(function(){
 
 
 // Calculator
@@ -7,27 +7,33 @@ $(document).ready(function(){
 	var operator = '';
 	var totalVal = '';
 	var result = '';
+	var inputCount = 0;
 
 	// Adds clicked numbers to the number variable and then sets value to totalVal
 	$('.numbers').on('click', function(){
 		if(result == ''){
-			number += $(this).text();
-			$('.inner-screen').text(number);
-			result = number;
-			console.log("number: " + number);
-			console.log("result: " + result);
-			number = '';	
+			inputCount++;
+			if (inputCount < 2){
+				number += $(this).text();
+				$('.inner-screen').text(number);
+				result = number;
+				console.log("number: " + number);
+				console.log("result: " + result);
+			} else {
+				newNumber = $(this).text();
+			}
+			// number = '';	
 		} else{
 			newNumber += $(this).text();
 			$('.inner-screen').text(newNumber);
 		}
+		console.log("number: " + number + ", newNumber: " + newNumber);
 		
 	});
 
 	$('.operators').on('click', function(){
 		operator = $(this).text();
-		console.log("new number: " + newNumber)
-		console.log("number: " + number)
+		console.log(operator);
 		$('.inner-screen').text('');
 	});
 
@@ -36,25 +42,29 @@ $(document).ready(function(){
 		number = '';
 		newNumber = '';
 		operator = '';
-		totalVal = ''
+		totalVal = '';
+		inputCount = 0;
 		console.log('Clear Button Worked!');
 		$('.inner-screen').text('');
 	});
 
 	$('.eval').on('click', function(){
-
-		if (operator === "+"){
-			result += newNumber;
+		console.log("num1: " + number + ", operator: " + operator + ", num2: " + newNumber);
+		if (operator === " + "){
+			result = parseFloat(newNumber) + parseFloat(number);
+			console.log("WORK!: " + number);
 			console.log(result);
-		} else if (operator === "-"){
-			result = newNumber - number;
+		} else if (operator === " - "){
+			totalVal =  parseFloat(number) - parseFloat(newNumber);
+			console.log(totalVal);
+		} else if (operator === " X "){
+			result = parseFloat(newNumber) * parseFloat(number);
 			console.log(result);
-		} else if (operator === "X"){
-			result = newNumber * number;
+		} else if (operator === " / "){
+			result = parseFloat(number) / parseFloat(newNumber);
 			console.log(result);
-		} else if (operator === "/"){
-			result = newNumber / number;
-			console.log(result);
+		} else {
+			console.log("didn't catch");
 		}
 
 		$('.inner-screen').text(result);
@@ -178,4 +188,4 @@ $(document).ready(function(){
 	// var length = path.getTotalLength();
 	// console.log(length); // 865
 
-});
+// });
