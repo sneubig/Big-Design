@@ -53,10 +53,9 @@
 		console.log("num1: " + number + ", operator: " + operator + ", num2: " + newNumber);
 		if (operator === " + "){
 			result = parseFloat(newNumber) + parseFloat(number);
-			console.log("WORK!: " + number);
 			console.log(result);
 		} else if (operator === " - "){
-			totalVal =  parseFloat(number) - parseFloat(newNumber);
+			result =  parseFloat(number) - parseFloat(newNumber);
 			console.log(totalVal);
 		} else if (operator === " X "){
 			result = parseFloat(newNumber) * parseFloat(number);
