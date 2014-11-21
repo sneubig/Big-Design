@@ -40,6 +40,7 @@
 	// Resets all the variables when clear button is clicked
 	$('.clear').on('click', function(){
 		number = '';
+		result = '';
 		newNumber = '';
 		operator = '';
 		totalVal = '';
