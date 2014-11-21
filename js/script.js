@@ -241,7 +241,7 @@ $(document).ready(function(){
 	function step( point ){
 		// Changes the top and left positioning of the path into percentages, to manipulate the size of the SVG path
 		objToAnimate.style.cssText = "top:" + (275 + point.y/100 * 40) + "px;" +
-										"left:" + (925 + point.x/100 * 30) + "px;"
+										"left:" + (929 + point.x/100 * 30) + "px;"
 		 							;
 	}
 
