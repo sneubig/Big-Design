@@ -98,7 +98,6 @@ body, html{
 	background-color: rgba(50,50,50,1);
 	border: 1px solid #212121;
 	border-radius: 1%;
-/*	box-shadow: -10px 7px 0px #212121;*/
 	transform: skewX(20deg);
 	box-shadow: inset 0 -5px 0 0 #212121, -5px 0 0 0 #212121;
 }
@@ -158,8 +157,6 @@ body, html{
 
 
 /************************ Lamp **************************/
-	
-/******* Container ********/
 
 .lamp-container{
 	width: 20%;
@@ -168,8 +165,6 @@ body, html{
 	right: 10%;
 	top: -25%;
 }
-
-/******* Base ********/
 
 .shade{
 	width: 40%;
@@ -330,18 +325,6 @@ body, html{
 	background-color: #000;
 }
 
-
-/*.blank-screen{
-	width: 90%;
-	height: 80%;
-	background-color: #000;
-	border-radius: 2%;
-	position: relative;
-	left: 5%;
-	top: 10%;
-	border: 1px solid #000;
-}*/
-
 .browser{
 	width: 100%;
 	height: 10%;
@@ -386,7 +369,7 @@ body, html{
 .google-logo{
 	width: 50%;
 	position: absolute;
-	left: 35%;
+	left: 37%;
 	top: 30%;
 }
 
@@ -419,7 +402,7 @@ body, html{
 	width: 40%;
 	height: 10%;
 	position: absolute;
-	left: 20%;
+	left: 22%;
 	top: 50%;
 }
 
@@ -451,19 +434,9 @@ body, html{
 	border-left: 4px solid transparent;
 	border-right: 4px solid transparent;
 	border-bottom: 6px solid #000;
-	transform: skewX(10deg);
+	transform: skewX(40deg);
 	display: none;
 	position: relative;
-}
-
-.scrollbar{
-	width: 2%;
-	height: 88%;
-	border: 1px solid black;
-	background-color: white;
-	position: absolute;
-	right: 0;
-	z-index: 2;
 }
 
 .macbook-type{
@@ -631,21 +604,6 @@ body, html{
 }
 
 /******* SVG Animation *********/
-#stephen{
-  width: 50%;
-  position: relative;
-  z-index: 3;
-}
-
-.s-animation{
-  fill: white;
-  stroke: black;
-  stroke-width: 5px;
-  stroke-dasharray: 300;
-  stroke-dashoffset: 300;
-  animation: fun 5s linear forwards;
-  -webkit-animation: fun 5s linear forwards;
-}
 
 #last_name{
   width: 32%;
@@ -659,7 +617,20 @@ body, html{
   stroke: black;
   stroke-dasharray: 865;
   stroke-dashoffset: 865;
+  animation: lastname 12s linear forwards;
   -webkit-animation: lastname 12s linear forwards;
+  -moz-animation: lastname 12s linear forwards;
+  -ms-animation: lastname 12s linear forwards;
+  -o-animation: lastname 12s linear forwards;
+}
+
+@keyframes lastname {
+  from {
+    stroke-dashoffset: 865;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 @-webkit-keyframes lastname {
@@ -671,100 +642,34 @@ body, html{
   }
 }
 
-@keyframes fun {
+@-moz-keyframes lastname {
   from {
-    stroke-dashoffset: 300;
+    stroke-dashoffset: 865;
   }
   to {
     stroke-dashoffset: 0;
   }
 }
 
-@-webkit-keyframes fun {
+@-ms-keyframes lastname {
   from {
-    stroke-dashoffset: 300;
+    stroke-dashoffset: 865;
   }
   to {
     stroke-dashoffset: 0;
   }
 }
 
-.tephen{
-  fill: white;
-  stroke: black;
-  stroke-width: 5px;
-  stroke-dasharray: 608;
-  stroke-dashoffset: 608;
-  animation: dash 10s linear forwards;
-  -webkit-animation: dash 10s linear forwards;
-  -webkit-animation-delay: 5s;
-}
-
-@keyframes dash {
+@-o-keyframes lastname {
   from {
-    stroke-dashoffset: 608;
+    stroke-dashoffset: 865;
   }
   to {
     stroke-dashoffset: 0;
   }
 }
 
-@-webkit-keyframes dash {
-  from {
-    stroke-dashoffset: 608;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
 
-.cross-t{
-  stroke: #FFF;
-  stroke-width: 5px;
-  stroke-dasharray: 86;
-  stroke-dashoffset: 86;
-  animation: crossedt 2s linear forwards;
-  -webkit-animation: crossedt 2s linear forwards;
-  -webkit-animation-delay: 15s;
-}
 
-@keyframes crossedt {
-  from {
-    stroke-dashoffset: 86;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
 
-@-webkit-keyframes crossedt {
-  from {
-    stroke-dashoffset: 86;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
 
-#welcome-svg{
-	width: 60%;
-}
-
-#welcome{
-	stroke: #000;
-  stroke-width: 1px;
-  stroke-dasharray: 747;
-  stroke-dashoffset: 747;
-  animation: welcome 10s linear forwards;
-  -webkit-animation: welcome 10s linear forwards;
-  -webkit-animation-delay: 0s;
-}
-
-@-webkit-keyframes welcome {
-  from {
-    stroke-dashoffset: 747;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
