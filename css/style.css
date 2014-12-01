@@ -511,6 +511,29 @@ body, html{
 	left: 37.5%;
 }
 
+.power-circle{
+  width: .4em;
+  height: .4em;
+  background-color: black;
+  border: .2em solid white;
+  border-radius: 100%;
+  position: relative;
+  left: .3em;
+  top: .3em;
+}
+
+.power-line{
+  width: .2em;
+  height: .5em;
+  background-color: white;
+  border: .1em solid black;
+  border-radius: 45%;
+  z-index: 4;
+  position: absolute;
+  left: .5em;
+  top: .1em;
+}
+
 .mousepad-submit-button{
 	width: 20%;
 	height: 18%;
