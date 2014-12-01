@@ -523,14 +523,14 @@ body, html{
 }
 
 .power-line{
-  width: .2em;
+  width: .15em;
   height: .5em;
   background-color: white;
   border: .1em solid black;
   border-radius: 45%;
   z-index: 4;
   position: absolute;
-  left: .5em;
+  left: .55em;
   top: .1em;
 }
 
