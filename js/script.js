@@ -55,7 +55,7 @@ $('.eval').on('click', function(){
     } else if (operator === " - "){
         result =  parseFloat(number) - parseFloat(newNumber);
         console.log(totalVal);
-    } else if (operator === " X "){
+    } else if (operator === " x "){
         result = parseFloat(newNumber) * parseFloat(number);
         console.log(result);
     } else if (operator === " / "){
