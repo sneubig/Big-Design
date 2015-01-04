@@ -530,7 +530,7 @@ body, html{
   border-radius: 45%;
   z-index: 4;
   position: absolute;
-  left: .55(em;
+  left: .55em;
   top: .1em;
 }
 
