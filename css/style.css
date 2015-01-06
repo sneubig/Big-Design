@@ -520,9 +520,6 @@ h1, h2, h3, h4, h5, h6{
 	width: 6em;
 }
 
-.lap-keys:nth-child(11){
-}
-
 .mousepad{
 	width: 25%;
 	height: 25%;
@@ -535,10 +532,10 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .power-circle{
-  width: .5em;
-  height: .5em;
+  width: .6em;
+  height: .6em;
   background-color: black;
-  border: .2em solid white;
+  border: .15em solid white;
   border-radius: 100%;
   position: relative;
   left: .3em;
