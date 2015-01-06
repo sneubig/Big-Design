@@ -26,6 +26,7 @@ h1, h2, h3, h4, h5, h6{
 .instructions h5{
 	text-decoration: underline;
 	text-align: center;
+	margin-bottom: .5em;
 }
 
 .instructions li{
@@ -82,13 +83,6 @@ h1, h2, h3, h4, h5, h6{
 	border: 2px solid black;
 }
 
-#total span{
-	width: 100%;
-	position: relative;
-	left: 50%;
-	font-size: 1em;
-}
-
 /******** Calc Keypad ***********/
 
 .keypad{
@@ -116,6 +110,9 @@ h1, h2, h3, h4, h5, h6{
 	border-radius: 10%;
 	box-shadow: -5px 5px 0px #212121;
 	display: inline-block;
+	position: relative;
+	left: .3em;
+	top: .3em;
 }
 
 #buttons .numbers{
