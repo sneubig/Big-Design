@@ -1,4 +1,4 @@
-// Laptop 
+$( document ).ready(function() {
 
 	// Show cursor when mouse enters the mousepad
 	$('.mousepad').on('mouseenter', function(){
@@ -76,3 +76,4 @@
 		$('.google-logo').toggle();
 		$('.searchbar').toggle();
 	});
+});
