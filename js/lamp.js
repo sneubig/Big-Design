@@ -1,4 +1,3 @@
-
 // Lamp
 	// Toggle Lamp On/Off
 	$('.switch').on('click', function(){
