@@ -624,14 +624,14 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .paper-side{
-  height: 61.7%;
+  height: 60.3%;
   width: 8%;
   background-color: white;
   border: 1px solid black;
   border-right: 1px solid pink;
   position: relative;
   right: 8%;
-  bottom: 22.3%;
+  bottom: 20.3%;
 }
 
 .holes{
