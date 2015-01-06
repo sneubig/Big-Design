@@ -1,73 +1,71 @@
 // $(document).ready(function(){
 
-// Calculator
-var number = '';
-var newNumber = '';
-var operator = '';
-var totalVal = '';
-var result = '';
-var inputCount = 0;
-
-// Adds clicked numbers to the number variable and then sets value to totalVal
-$('.numbers').on('click', function(){
-    if(result == ''){
-        inputCount++;
-        if (inputCount < 2){
-            number += $(this).text();
-            $('.inner-screen').text(number);
-            result = number;
-            console.log("number: " + number);
-            console.log("result: " + result);
-        } else {
-            newNumber = $(this).text();
+	var testNumLength = function(number) {
+    if (number.length > 9) {
+        totaldiv.text(number.substr(number.length-9,9));
+        if (number.length > 15) {
+          number = "";
+          totaldiv.text("Err");
         }
-        // number = ''; 
-    } else{
-        newNumber += $(this).text();
-        $('.inner-screen').text(newNumber);
-    }
-    //console.log("number: " + number + ", newNumber: " + newNumber);
-});
+    } 
+  };
 
-$('.operators').on('click', function(){
-    operator = $(this).text();
-    //console.log(operator);
-    $('.inner-screen').text('');
-});
+	var number = "";
+  var newnumber = "";
+  var operator = "";
+  var totaldiv = $("#total");
+  
+  $('#buttons').on('click', function(){
+		$('a').on('click', function(){
+			$(this).addClass('active');
+			$(this).removeClass('active');
+		});
+	});
 
-// Resets all the variables when clear button is clicked
-$('.clear').on('click', function(){
-    number = '';
-    result = '';
-    newNumber = '';
-    operator = '';
-    totalVal = '';
-    inputCount = 0;
-    //console.log('Clear Button Worked!');
-    $('.inner-screen').text('');
-});
+    $(".numbers").on('click', function(){
+			number += $(this).text();
+			console.log(number);
+			totaldiv.text(number);
+			testNumLength(number);
+    });
 
-$('.eval').on('click', function(){
-    console.log("num1: " + number + ", operator: " + operator + ", num2: " + newNumber);
-    if (operator === " + "){
-        result = parseFloat(newNumber) + parseFloat(number);
-        console.log(result);
-    } else if (operator === " - "){
-        result =  parseFloat(number) - parseFloat(newNumber);
-        console.log(totalVal);
-    } else if (operator === " x "){
-        result = parseFloat(newNumber) * parseFloat(number);
-        console.log(result);
-    } else if (operator === " / "){
-        result = parseFloat(number) / parseFloat(newNumber);
-        console.log(result);
-    } else {
-        console.log("didn't catch");
-    }
-    $('.inner-screen').text(result);
-    number = '';
-    newNumber = '';
-});
+    $(".operators").on('click', function(){
+			operator = $(this).text();
+			newnumber = number;
+			number = "";
+			totaldiv.text("");
+    });
+
+    $("#clear").on('click', function(){
+			number = "";
+			newnumber = "";
+			totaldiv.text("0");
+    });
+
+    //Add your last .click() here!
+    $('#equals').on('click', function(){
+      number = parseInt(number, 10);
+      newnumber = parseInt(newnumber, 10);
+      var result;
+      
+      if (operator === "+") {
+          result = newnumber + number; 
+      } else if (operator === "-"){
+          result = newnumber - number;
+      } else if (operator === "/"){
+          result = newnumber / number;
+      } else if (operator === "x"){
+          result = newnumber * number;
+      }
+      
+      result = result.toString(10);
+      totaldiv.text(result);
+      testNumLength(result);
+      number = '';
+      newnumber = '';
+    });
+    
+	// });
 
 // Laptop 
 

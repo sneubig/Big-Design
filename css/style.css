@@ -71,43 +71,18 @@ h1, h2, h3, h4, h5, h6{
 	box-shadow: inset 0 0 0 0 #212121, -5px 0 0 0 #212121;
 }
 
-.screen .clear{
-	width: 15%;
-	height: 30%;
-	position: relative;
-	top: 40%;
-	left: -2%;
-	background-color: #E30000;
-	box-shadow: -1px 1px 0px #A80000;
-}
-
-.screen .clear:active{
-	background-color: #E30000;
-	box-shadow: -0px 0px 0px #A80000;
-	transform: translateY(2px);
-}
-
-.outline{
-	position: relative;
-	top: -30%;
-	left: 24%;
-	width: 70%;
-	height: 50%;
-	background-color: #fff;
-	border: 3px solid #aaa;
-}
-
-.inner-screen{
+#total{
 	width: 90%;
 	height: 50%;
 	position: relative;
 	top: 25%;
 	left: 5%;
-	background-color: rgba(0,200,0,.7);
+	background-color: rgba(255,255,255,.7);
 	border-radius: 5%;
+	border: 2px solid black;
 }
 
-.inner-screen span{
+#total span{
 	width: 100%;
 	position: relative;
 	left: 50%;
@@ -131,20 +106,9 @@ h1, h2, h3, h4, h5, h6{
 	box-shadow: inset 0 -5px 0 0 #212121, -5px 0 0 0 #212121;
 }
 
-#numbers{
-	width: 100%;
-	display: inline-block;
-}
-
-#operators{
-	width: 100%;
-	display: inline-block;
-}
-
-.buttons{
+#buttons > a{
 	width: 1.2em;
 	height: 1.2em;
-	background-color: #000;
 	color: #fff;
 	margin: .2em .2em;
 	text-align: center;
@@ -154,27 +118,30 @@ h1, h2, h3, h4, h5, h6{
 	display: inline-block;
 }
 
-#operators .buttons{
+#buttons .numbers{
+	background-color: #000;
+}
+
+#buttons .operators{
 	background-color: #5C5C5C;
 }
 
-#numbers .eval{
-	background-color: #5C5C5C;
-	width: 2.8em;
+#buttons #clear{
+	background-color: #E30000;
+	box-shadow: -1px 1px 0px #A80000;
 }
 
-.buttons span{
-	position: relative;
-	top: 30%;
-	font-size: .7em;
+#buttons #equals{
+	background-color: #E30000;
+	box-shadow: -1px 1px 0px #A80000;
 }
 
-.buttons:active{
+#buttons a:active{
 	box-shadow: -3px 3px 0px #212121;
 	transform: translateY(2px);
 }
 
-.buttons:active span{
+#buttons a:active{
 	transform: translateY(4px);
 }
 
