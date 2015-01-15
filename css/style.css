@@ -512,14 +512,14 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .power-line{
-  width: .15em;
+  width: .25em;
   height: .5em;
   background-color: white;
   border: .1em solid black;
   border-radius: 45%;
   z-index: 4;
   position: absolute;
-  left: .55em;
+  left: .5em;
   top: .1em;
 }
 
