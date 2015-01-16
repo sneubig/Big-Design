@@ -184,7 +184,7 @@ h1, h2, h3, h4, h5, h6{
 	position: relative;
 	top: 50%;
 	left: 30%;
-	border-radius: 20%;
+	border-radius: 10%;
 	transform: skewX(135deg);
 }
 
