@@ -13,6 +13,7 @@ $( document ).ready(function() {
 	var number = "";
 	var newnumber = "";
 	var operator = "";
+	var result = "";
 	var totaldiv = $("#total");
 
 	$('#buttons').on('click', function(){
@@ -46,7 +47,6 @@ $( document ).ready(function() {
 	$('#equals').on('click', function(){
 	  number = parseInt(number, 10);
 	  newnumber = parseInt(newnumber, 10);
-	  var result;
 	  
 	  if (operator === "+") {
 	      result = newnumber + number; 
@@ -61,7 +61,11 @@ $( document ).ready(function() {
 	  result = result.toString(10);
 	  totaldiv.text(result);
 	  testNumLength(result);
-	  number = '';
+	  number = result;
 	  newnumber = '';
+
+	  console.log('numberA: ' + number);
+	  console.log('numberB: ' + newnumber);
+	  console.log('result: ' + result);
 	});
 });
