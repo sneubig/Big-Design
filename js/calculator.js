@@ -31,15 +31,39 @@ $( document ).ready(function() {
 	});
 
 	$(".operators").on('click', function(){
+
 		operator = $(this).text();
-		newnumber = number;
-		number = "";
-		totaldiv.text("");
+
+		// Convert String to Integers before passing to calculate function
+		number = parseInt(number, 10);
+
+
+		if(newnumber === undefined){
+			newnumber = number;
+		}else{
+
+	  	if(result !== ""){
+	  		// Calculate the new result
+	  		result = calculateResult(result, number);
+
+	  		testNumLength(result);
+	  	}else{
+	  		// Set Result for the first number in operation
+	  		result = number;
+	  	}
+		}
+		
+	  newnumber = number;
+	  number = '';
+	  
+	  totaldiv.text(result);
+
 	});
 
 	$("#clear").on('click', function(){
 		number = "";
 		newnumber = "";
+		result = "";
 		totaldiv.text("0");
 	});
 
@@ -48,24 +72,34 @@ $( document ).ready(function() {
 	  number = parseInt(number, 10);
 	  newnumber = parseInt(newnumber, 10);
 	  
-	  if (operator === "+") {
-	      result = newnumber + number; 
-	  } else if (operator === "-"){
-	      result = newnumber - number;
-	  } else if (operator === "/"){
-	      result = newnumber / number;
-	  } else if (operator === "x"){
-	      result = newnumber * number;
+	  if(result !== ""){
+	  	result = calculateResult(result, number);
+
+	  	totaldiv.text(result);
+	  	testNumLength(result);
+	  	number = result;
+	  	newnumber = '';
+	  }else{
+	  	result = number;
 	  }
 	  
-	  result = result.toString(10);
-	  totaldiv.text(result);
-	  testNumLength(result);
-	  number = result;
-	  newnumber = '';
-
-	  console.log('numberA: ' + number);
-	  console.log('numberB: ' + newnumber);
-	  console.log('result: ' + result);
+	  newnumber = number;
+	  number = '';
 	});
+
+	function calculateResult(number1, number2){
+		if (operator === "+") {
+	      result = parseInt(number1) + parseInt(number2); 
+	  } else if (operator === "-"){
+	      result = parseInt(number1) - parseInt(number2);
+	  } else if (operator === "/"){
+	      result = eval(parseInt(number1) / parseInt(number2));
+	  } else if (operator === "x"){
+	      result = eval(parseInt(number1) * parseInt(number2));
+	  }
+	  
+	  return result;
+	};
+
+
 });
