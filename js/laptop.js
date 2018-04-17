@@ -71,11 +71,24 @@ $( document ).ready(function() {
 
 	// Turn the laptop screen on/off
 	$('#power').on('click', function(){
+		if($("#lap-screen").hasClass("macShutdownAnimation")){
+			$('.lap-screen').removeClass('macShutdownAnimation').addClass('macStartUpAnimation');
+			$('.browser').removeClass('macShutdownAnimation').addClass('macStartUpAnimation');
+			$('.google-logo').removeClass('macShutdownAnimation').addClass('macStartUpAnimation');
+			$('.searchbar').removeClass('macShutdownAnimation').addClass('macStartUpAnimation');
+			$('.browser').delay(4000).fadeToggle();
+			$('.google-logo').delay(4000).fadeToggle();
+			$('.searchbar').delay(4000).fadeToggle();
+		}else{
+			$('.browser').toggle();
+			$('.google-logo').delay(1000).fadeToggle();
+			$('.searchbar').delay(1000).fadeToggle();
+			$('.lap-screen').removeClass('macStartUpAnimation');
+			$('.lap-screen').addClass('macShutdownAnimation');
+		}
 		//$('.lap-screen').toggleClass('screen-off');
-		$('.browser').toggle();
-		$('.google-logo').toggle();
-		$('.searchbar').toggle();
-		$('.lap-screen').toggleClass('macStartUpAnimation');
+		
+		
 	});
 
 

@@ -385,7 +385,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .macStartUpAnimation {
-	background-color: white;
+	opacity: 1;
 	-webkit-transition: all 5s ease-in;
   -moz-transition: all 5s ease-in;
   -o-transition: all 5s ease-in;
