@@ -338,10 +338,10 @@ h1, h2, h3, h4, h5, h6{
 /******* Container ********/
 
 .lap-container{
-	width: 30%;
-	min-width: 15em;
-	height: 65%;
-	min-height: 20em;
+	width: 400px;
+	//min-width: 15em;
+	height: 400px;
+	//min-height: 20em;
 	position: absolute;
 	top: 10%;
 	left: 30%;
@@ -528,7 +528,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .lap-keys{
-	width: 1.3em;
+	width: 1.35em;
 	height: 1.3em;
 	border: 1px solid #eee;
 	border-radius: 20%;
