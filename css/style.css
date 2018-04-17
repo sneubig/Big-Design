@@ -497,6 +497,8 @@ h1, h2, h3, h4, h5, h6{
 	position: relative;
 }
 
+
+
 .macbook-type{
 	font-family: 'lucida Sans';
 	font-size: .8em;
@@ -577,16 +579,17 @@ h1, h2, h3, h4, h5, h6{
   top: .3em;
 }
 
-.power-line{
-  width: .25em;
-  height: .5em;
+.power-circle:after{
+	content: '';
+ 	width: 2px;
+  height: 5px;
   background-color: white;
-  border: .1em solid black;
-  border-radius: 45%;
+  border: 2px solid black;
+  //border-radius: 45%;
   z-index: 4;
   position: absolute;
-  left: .5em;
-  top: .1em;
+  left: -1px;
+  top: -.3em;
 }
 
 .mousepad-submit-button{
