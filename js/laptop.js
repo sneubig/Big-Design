@@ -71,9 +71,16 @@ $( document ).ready(function() {
 
 	// Turn the laptop screen on/off
 	$('#power').on('click', function(){
-		$('.lap-screen').toggleClass('screen-off');
+		//$('.lap-screen').toggleClass('screen-off');
 		$('.browser').toggle();
 		$('.google-logo').toggle();
 		$('.searchbar').toggle();
+		$('.lap-screen').toggleClass('macStartUpAnimation');
 	});
+
+
+
+
+
+
 });
