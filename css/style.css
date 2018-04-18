@@ -186,7 +186,7 @@ h1, h2, h3, h4, h5, h6{
 	z-index: 10;
 }
 
-
+/*
 .shade:after {
 	content: '';
 	width: 120px;
@@ -198,7 +198,7 @@ h1, h2, h3, h4, h5, h6{
 	margin-left: -10px;
 	z-index: 10;
 }
-
+*/
 /*
 .shade-top{
 	width: 20%;
@@ -210,20 +210,23 @@ h1, h2, h3, h4, h5, h6{
 	border-radius: 10%;
 	transform: skewX(135deg);
 }
+*/
 
 .bulb{
-	width: 2.5em;
-	height: 3em;
-	background-color: white;
+	width: 30px;
+	height: 20px;
+	background-color: yellow;
 	border: 1px solid white;
-	border-radius: 100%;
-	position: relative;
-	left: 20%;
-	top: 25%;
-	z-index: 5;
-	transform: skewX(-30deg);
+	border-radius: 0 0 100px 100px;
+	position: absolute;
+	margin-left: 2%;
+	margin-top: 53%;
+	//z-index: 20;
+	transform: rotate(40deg);
+	background-color: grey;
 }
-*/
+
+
 .light-on{
 	background-color: yellow;
 }
@@ -233,11 +236,11 @@ h1, h2, h3, h4, h5, h6{
 	height: 0; 
 	border-left: 8em solid transparent;
 	border-right: 8em solid transparent;
-	border-bottom: 20em solid rgba(255,255,224,0.5);
-	transform: skewX(-40deg);
+	border-bottom: 20em solid rgba(255,255,224,0.7);
+	transform: rotate(40deg);
 	position: absolute;
-	margin-top: 60%;
-	margin-left: -40%;
+	margin-top: -5%;
+	margin-left: -10%;
 	display: none;
 	z-index: 5;
 }
