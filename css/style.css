@@ -381,6 +381,23 @@ h1, h2, h3, h4, h5, h6{
 
 .screen-off{
 	background-color: #000;
+	z-index: 5;
+}
+
+.macStartUpAnimation {
+	opacity: 1;
+	-webkit-transition: all 5s ease-in;
+  -moz-transition: all 5s ease-in;
+  -o-transition: all 5s ease-in;
+  transition: all 5s ease-in;
+}
+
+.macShutdownAnimation {
+	background-color: black;
+	-webkit-transition: all 5s ease-out;
+  -moz-transition: all 5s ease-out;
+  -o-transition: all 5s ease-out;
+  transition: all 5s ease-out;
 }
 
 .browser{
