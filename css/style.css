@@ -318,21 +318,22 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .switch{
-	width: 10px;
+	width: 12px;
 	height: 10px;
 	position: absolute;
-	margin-left: 2px;
-	margin-top: -10px;
+	margin-left: 62px;
+	margin-top: -275px;
 	background-color: red;
-	border-radius: 2px 2px 0 0;
+	border-radius: 2px 3px 3px 3px;
 	border: 1px solid #aaa;
-	//transform: skewX(25deg);
+	transform: rotate(-50deg);
 	//box-shadow: -3px 3px 0px #000;
+	z-index: 100;
 }
 
 .switch:active{
 	//box-shadow: -1px 1px 0px #000;
-	transform: translateY(0px) skewX(-5deg);
+	//transform: translateY(0px) skewX(-5deg);
 }
 
 
