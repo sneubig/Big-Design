@@ -149,6 +149,28 @@ h1, h2, h3, h4, h5, h6{
 	transform: translateY(4px);
 }
 
+.stickyNote {
+	text-decoration:none;
+  color:#000;
+  background: #f8e13b; //#ffc;
+  display:block;
+  height:4em;
+  width:4em;
+  padding: 10px;
+  font-family:"Reenie Beanie",arial,sans-serif;
+  
+  border-top: 5px solid #e9d01b;
+}
+
+#stickyNote1 {
+	position: absolute;
+	margin-top: 150px;
+	margin-left: 100px;
+	z-index: 100;
+	-webkit-transform:rotate(45deg);
+  -o-transform:rotate(45deg);
+  -moz-transform:rotate(45deg);
+}
 
 /************************ Lamp **************************/
 
