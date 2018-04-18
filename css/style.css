@@ -156,9 +156,8 @@ h1, h2, h3, h4, h5, h6{
   display:block;
   height:4em;
   width:4em;
-  padding: 10px;
+  padding: 5px;
   font-family:"Reenie Beanie",arial,sans-serif;
-  
   border-top: 5px solid #e9d01b;
 }
 
@@ -383,6 +382,20 @@ h1, h2, h3, h4, h5, h6{
 	-webkit-transform:rotate(0deg);
   -o-transform:rotate(0deg);
   -moz-transform:rotate(0deg);
+}
+
+#googleStickyNote {
+	position: absolute;
+	margin-top: 100px;
+	margin-left: -40px;
+	z-index: 100;
+	-webkit-transform:rotate(-30deg);
+  -o-transform:rotate(-30deg);
+  -moz-transform:rotate(-30deg);
+}
+
+#googleStickyNote span {
+	margin-left: 2em;
 }
 
 /******* Laptop Screen ********/
