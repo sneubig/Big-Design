@@ -34,30 +34,33 @@ $( document ).ready(function() {
 
 		operator = $(this).text();
 
-		// Convert String to Integers before passing to calculate function
-		number = parseInt(number, 10);
+		// Add condition to ensure that a valid number is entered first, rather than an operator
+		if(number === NaN || number === ""){
+			result = 0;
+		} else {
+			// Convert String to Integers before passing to calculate function
+			number = parseInt(number, 10);
 
+			if(newnumber === NaN || number === NaN){
+				newnumber = number;
+			}else{
 
-		if(newnumber === undefined){
-			newnumber = number;
-		}else{
+				if(result !== ""){
+	  			// Calculate the new result
+	  			result = calculateResult(result, number);
 
-	  	if(result !== ""){
-	  		// Calculate the new result
-	  		result = calculateResult(result, number);
-
-	  		testNumLength(result);
-	  	}else{
-	  		// Set Result for the first number in operation
-	  		result = number;
+	  			testNumLength(result);
+	  		}else{
+	  			// Set Result for the first number in operation
+	  			result = number;
+	  		}
 	  	}
-		}
-		
-	  newnumber = number;
-	  number = '';
-	  
-	  totaldiv.text(result);
 
+	  	newnumber = number;
+	  	number = '';
+
+	  totaldiv.text(result);
+	 }
 	});
 
 	$("#clear").on('click', function(){
@@ -69,22 +72,28 @@ $( document ).ready(function() {
 
 	//Add your last .click() here!
 	$('#equals').on('click', function(){
-	  number = parseInt(number, 10);
-	  newnumber = parseInt(newnumber, 10);
-	  
-	  if(result !== ""){
-	  	result = calculateResult(result, number);
+		// Add condition to ensure that a valid number is entered first, rather than an equal
+		if(number === NaN || number === ""){
+			result = 0;
+		} else{
+			number = parseInt(number, 10);
+			newnumber = parseInt(newnumber, 10);
 
-	  	totaldiv.text(result);
-	  	testNumLength(result);
-	  	number = result;
-	  	newnumber = '';
-	  }else{
-	  	result = number;
-	  }
+			if(result !== ""){
+				result = calculateResult(result, number);
+
+				totaldiv.text(result);
+				testNumLength(result);
+				number = result;
+				newnumber = '';
+			}else{
+				result = number;
+			}
+
+			newnumber = number;
+			number = '';
+		}
 	  
-	  newnumber = number;
-	  number = '';
 	});
 
 	function calculateResult(number1, number2){
