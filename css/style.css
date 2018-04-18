@@ -81,6 +81,26 @@ h1, h2, h3, h4, h5, h6{
 }
 
 
+/***** Clock Animation *****/
+@keyframes rotate {
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+.hours {
+	animation: rotate 43200s infinite steps(60); /* Step interval rotation */
+}
+
+.minutes {
+	animation: rotate 3600s infinite steps(60); /* Step interval rotation */
+}
+
+.seconds {
+	animation: rotate 60s infinite linear; /* Smooth rotation */
+}
+
+
 
 
 /************************ Instructions **************************/		
