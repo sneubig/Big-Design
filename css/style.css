@@ -394,10 +394,10 @@ h1, h2, h3, h4, h5, h6{
 
 .macShutdownAnimation {
 	background-color: black;
-	-webkit-transition: all 5s ease-in;
-  -moz-transition: all 5s ease-in;
-  -o-transition: all 5s ease-in;
-  transition: all 5s ease-in;
+	-webkit-transition: all 5s ease-out;
+  -moz-transition: all 5s ease-out;
+  -o-transition: all 5s ease-out;
+  transition: all 5s ease-out;
 }
 
 .browser{
