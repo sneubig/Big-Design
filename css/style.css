@@ -96,7 +96,7 @@ h1, h2, h3, h4, h5, h6{
 	transition: transform 0.3s cubic-bezier(.4,2.08,.55,.44);
 }
 
-#seconds-container {
+.seconds-container {
 	transition: transform 0.2s cubic-bezier(.4,2.08,.55,.44);
 }
 
