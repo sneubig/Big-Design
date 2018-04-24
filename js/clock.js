@@ -48,11 +48,12 @@ function initLocalClocks() {
         // If this is a minute hand, note the seconds position (to calculate minute position later)
         if (hands[j].hand === 'minutes') {
           elements[k].parentNode.setAttribute('data-second-angle', hands[j + 1].angle);
+          elements[k].parentNode.setAttribute('data-minute-angle', hands[j].angle + 6);
         }
 
-        // If this is a minute hand, note the seconds position (to calculate minute position later)
+        // If this is a second hand
         if (hands[j].hand === 'seconds') {
-          elements[k].parentNode.setAttribute('data-second-angle', hands[2].angle);
+          elements[k].parentNode.setAttribute('data-second-angle', hands[j].angle);
         }
     }
   }
@@ -80,20 +81,25 @@ function setUpMinuteHands() {
  * Do the first minute's rotation
  */
 function moveMinuteHands(containers) {
+   var minuteAngle = Number(containers[0].parentNode.getAttribute("data-minute-angle"));
+   console.log('minuteAngle: ' + minuteAngle);
+
   for (var i = 0; i < containers.length; i++) {
-    containers[i].style.webkitTransform = 'rotateZ(6deg)';
-    containers[i].style.transform = 'rotateZ(6deg)';
+    containers[i].style.webkitTransform = 'rotateZ(' + minuteAngle + 'deg)';
+    containers[i].style.transform = 'rotateZ(' + minuteAngle + 'deg)';
   }
+
   // Then continue with a 60 second interval
   setInterval(function() {
     for (var i = 0; i < containers.length; i++) {
-      if (containers[i].angle === undefined) {
-        containers[i].angle = 12;
+      if (minuteAngle === undefined) {
+        minuteAngle = 12;
       } else {
-        containers[i].angle += 6;
+        minuteAngle += 6;
       }
-      containers[i].style.webkitTransform = 'rotateZ('+ containers[i].angle +'deg)';
-      containers[i].style.transform = 'rotateZ('+ containers[i].angle +'deg)';
+      console.log('minuteAngle After: ' + minuteAngle);
+      containers[i].style.webkitTransform = 'rotateZ('+ minuteAngle +'deg)';
+      containers[i].style.transform = 'rotateZ('+ minuteAngle +'deg)';
     }
   }, 60000);
 }
