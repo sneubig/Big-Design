@@ -265,8 +265,9 @@ h1, h2, h3, h4, h5, h6{
 	width: 250px;
 	height: 400px;
 	position: absolute;
-	right: 10%;
-	top: -20%;
+	top: -125px;
+	right: 5%;
+	
 }
 
 #lampStickyNote {
