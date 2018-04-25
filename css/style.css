@@ -804,6 +804,17 @@ h1, h2, h3, h4, h5, h6{
 
 /************************ Paper **************************/
 
+#welcomeMessage {
+	font: 12px 'AmericanTypewriter', Cambria, Georgia; 
+	line-height: 1.4em;
+	color: #282625; 
+	position: relative;
+	padding: 0px 5px 0px 17px;
+	margin: 4px 0px;
+	width: 150px;
+}
+
+
 /* Main Paper Container */
 .paper {
 	/* Paper Positioning */
