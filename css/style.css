@@ -157,7 +157,7 @@ h1, h2, h3, h4, h5, h6{
 	width: 250px;
 	height: 200px;
 	position: absolute;
-	top: 250px;
+	//top: 250px;
 	left: 70px;
 }
 
@@ -265,7 +265,7 @@ h1, h2, h3, h4, h5, h6{
 	width: 250px;
 	height: 400px;
 	position: absolute;
-	top: -125px;
+	top: -350px;
 	right: 5%;
 	
 }
@@ -463,11 +463,9 @@ h1, h2, h3, h4, h5, h6{
 
 .lap-container{
 	width: 400px;
-	//min-width: 15em;
 	height: 400px;
-	//min-height: 20em;
 	position: absolute;
-	top: 10%;
+	top: -150px;
 	left: 30%;
 }
 
@@ -774,24 +772,25 @@ h1, h2, h3, h4, h5, h6{
 	height: 15%;
   transform: skewX(-25deg);
   position: absolute;
-  left: 80%;
-  top: 65%;
+  top: 100px;
+  left: 70%;
+  
   z-index: 12;
   animation: fun 5s linear forwards;
   -webkit-animation: fun 5s linear forwards;
 }
 
 .eraser{
-  height: 3%;
-  width: 40%;
-  background-color: pink;
-  border-bottom: 5px solid gold;
+  height: 8px;
+  width: 15px;
+  background-color: red;
+  border-bottom: 8px solid #f49b95;
 }
 
 .pencil{
-  height:75%;
-  width: 40%;
-  background-color: yellow;
+  height:75px;
+  width: 15px;
+  background-color:	#FFCC00;
 }
 
 .point{
@@ -806,10 +805,10 @@ h1, h2, h3, h4, h5, h6{
 /************************ Paper **************************/
 .paper-container{
   width: 30%;
-  height: 50%;
+  height: 300px;
   position: absolute;
-  left: 70%;
-  bottom: 10%;
+  top: 25px;
+  right: 2%;
 }
 
 .paper-lines{
@@ -856,7 +855,7 @@ h1, h2, h3, h4, h5, h6{
 #last_name{
   width: 32%;
   position: relative;
-  z-index: 3;
+  z-index: 50;
 }
 
 .neubig{
@@ -870,6 +869,7 @@ h1, h2, h3, h4, h5, h6{
   -moz-animation: lastname 12s linear forwards;
   -ms-animation: lastname 12s linear forwards;
   -o-animation: lastname 12s linear forwards;
+  z-index: 50;
 }
 
 @keyframes lastname {
