@@ -848,6 +848,11 @@ h1, h2, h3, h4, h5, h6{
 	border-left: 1px solid #F8D3D3;
 }
 
+
+#instructions h6 {
+	margin-left: -17px; /* To counteract the edge siding when centering */
+	text-align: center;
+}
 #calculationAnswerInput {
 	width: 30px;
 	height: 14px;
