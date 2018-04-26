@@ -32,35 +32,57 @@ $( document ).ready(function() {
 
 	$(".operators").on('click', function(){
 
-		operator = $(this).text();
+		console.log('result: ' + result);
+		console.log('number: ' + number);
+		console.log('newnumber: ' + newnumber);
 
-		// Add condition to ensure that a valid number is entered first, rather than an operator
-		if(number === NaN || number === ""){
-			result = 0;
-		} else {
-			// Convert String to Integers before passing to calculate function
-			number = parseInt(number, 10);
+		
+		
+		// Calculate new result if operator is selected in long calculation
+		if(result !== ""){
+			// If this is not the first operator in a multi-chained calculation then we want to use the previous operator to
+			// calculate the result, before using the newly clicked operator
+			result = calculateResult(result, number);
 
-			if(newnumber === NaN || number === NaN){
-				newnumber = number;
-			}else{
+			// Store the newly clicked operator for the next operation that will be calculated
+			operator = $(this).text();
 
-				if(result !== ""){
-	  			// Calculate the new result
-	  			result = calculateResult(result, number);
+			newnumber = number;
+			number = '';
+		}else{
+			operator = $(this).text();
+			// Add condition to ensure that a valid number is entered first, rather than an operator
+			if(number === NaN || number === ""){
+				result = 0;
 
-	  			testNumLength(result);
-	  		}else{
-	  			// Set Result for the first number in operation
-	  			result = number;
-	  		}
-	  	}
+			} else {
+				// Convert String to Integers before passing to calculate function
+				number = parseInt(number, 10);
 
-	  	newnumber = number;
-	  	number = '';
+				if(newnumber === NaN || number === NaN){
+					newnumber = number;
+				}else{
 
-	  totaldiv.text(result);
-	 }
+					if(result !== ""){
+		  			// Calculate the new result
+		  			result = calculateResult(result, number);
+
+		  			testNumLength(result);
+		  		}else{
+		  			// Set Result for the first number in operation
+		  			result = number;
+		  		}
+		  	}
+
+		  	newnumber = number;
+		  	number = '';
+		  	
+		  }
+		}
+			console.log('result END: ' + result);
+	  	totaldiv.text(result);
+
+		
 	});
 
 	$("#clear").on('click', function(){
@@ -100,11 +122,11 @@ $( document ).ready(function() {
 		if (operator === "+") {
 	      result = parseInt(number1) + parseInt(number2); 
 	  } else if (operator === "-"){
-	      result = parseInt(number1) - parseInt(number2);
+	      result = parseInt(number1 - number2);
 	  } else if (operator === "/"){
-	      result = eval(parseInt(number1) / parseInt(number2));
+	      result = parseInt(number1 / number2);
 	  } else if (operator === "x"){
-	      result = eval(parseInt(number1) * parseInt(number2));
+	      result = parseInt(number1 * number2);
 	  }
 	  
 	  return result;
