@@ -1,11 +1,21 @@
 $( document ).ready(function() {
 	
+	// Validate Calculation Answer when focusout of input box
 	$('#calculationAnswerInput').focusout(function(){
 		validateCalculationAnswer();
-		
 	});
 
-});
+	// Validate Calculation Answer when pressing Enter
+	$('#calculationAnswerInput').keypress(function(e) {
+		if(e.which == 13){
+			validateCalculationAnswer();
+
+			// Lose Focus of input field (so validation css will override)
+			$(this).blur();
+		}
+	});
+
+});k
 
 function validateCalculationAnswer() {
 	// Get input value
