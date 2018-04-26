@@ -46,7 +46,7 @@ $( document ).ready(function() {
 
 			// Store the newly clicked operator for the next operation that will be calculated
 			operator = $(this).text();
-			
+
 			newnumber = number;
 			number = '';
 		}else{
@@ -120,7 +120,7 @@ $( document ).ready(function() {
 
 	function calculateResult(number1, number2){
 		if (operator === "+") {
-	      result = parseInt(number1 + number2); 
+	      result = parseInt(number1) + parseInt(number2); 
 	  } else if (operator === "-"){
 	      result = parseInt(number1 - number2);
 	  } else if (operator === "/"){
