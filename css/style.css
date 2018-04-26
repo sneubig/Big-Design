@@ -804,7 +804,7 @@ h1, h2, h3, h4, h5, h6{
 
 /************************ Paper **************************/
 
-#welcomeMessage {
+#instructions {
 	font: 12px 'AmericanTypewriter', Cambria, Georgia; 
 	line-height: 1.4em;
 	color: #282625; 
@@ -812,6 +812,12 @@ h1, h2, h3, h4, h5, h6{
 	padding: 0px 5px 0px 17px;
 	margin: 4px 0px;
 	width: 150px;
+}
+
+#instructions ol {
+	margin: 0;
+	text-align: left;
+	padding-left: 2px;
 }
 
 
@@ -862,6 +868,11 @@ h1, h2, h3, h4, h5, h6{
 	left: 15px;
 	bottom: 0;
 	border-left: 1px solid #F8D3D3;
+}
+
+#calculationAnswerInput {
+	width: 30px;
+	height: 14px;
 }
 
 /* Paper Main 
