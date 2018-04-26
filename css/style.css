@@ -871,6 +871,11 @@ h1, h2, h3, h4, h5, h6{
 	border-left: 1px solid #F8D3D3;
 }
 
+#calculationAnswerInput {
+	width: 30px;
+	height: 14px;
+}
+
 /* Paper Main 
 .paper:after {
 	content: '';
