@@ -804,7 +804,7 @@ h1, h2, h3, h4, h5, h6{
 
 /************************ Paper **************************/
 
-#welcomeMessage {
+#instructions {
 	font: 12px 'AmericanTypewriter', Cambria, Georgia; 
 	line-height: 1.4em;
 	color: #282625; 
@@ -814,11 +814,10 @@ h1, h2, h3, h4, h5, h6{
 	width: 150px;
 }
 
-#welcomeMessage ol {
+#instructions ol {
 	margin: 0;
 	text-align: left;
 	padding-left: 2px;
-
 }
 
 

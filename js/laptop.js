@@ -79,21 +79,27 @@ $( document ).ready(function() {
 			$('.browser').delay(4000).fadeToggle();
 			$('.google-logo').delay(4000).fadeToggle();
 			$('.searchbar').delay(4000).fadeToggle();
+
 		}else{
 			$('.browser').toggle();
 			$('.google-logo').delay(1000).fadeToggle();
 			$('.searchbar').delay(1000).fadeToggle();
 			$('.lap-screen').removeClass('macStartUpAnimation');
 			$('.lap-screen').addClass('macShutdownAnimation');
+
+			strikeThroughComputerTask();
 		}
 		//$('.lap-screen').toggleClass('screen-off');
 		
 		
 	});
 
-
-
-
-
-
 });
+
+
+
+function strikeThroughComputerTask() {
+		var laptopInstruction = document.getElementById('laptopInstruction');
+
+		$(laptopInstruction).css('text-decoration', 'line-through');
+}
