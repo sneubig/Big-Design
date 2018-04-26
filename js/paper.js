@@ -9,10 +9,13 @@ $( document ).ready(function() {
 	$('#calculationAnswerInput').keypress(function(e) {
 		if(e.which == 13){
 			validateCalculationAnswer();
+
+			// Lose Focus of input field (so validation css will override)
+			$(this).blur();
 		}
 	});
 
-});
+});k
 
 function validateCalculationAnswer() {
 	// Get input value
