@@ -814,6 +814,13 @@ h1, h2, h3, h4, h5, h6{
 	width: 150px;
 }
 
+#welcomeMessage ol {
+	margin: 0;
+	text-align: left;
+	padding-left: 17px;
+
+}
+
 
 /* Main Paper Container */
 .paper {
