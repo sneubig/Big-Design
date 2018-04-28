@@ -15,7 +15,7 @@ $( document ).ready(function() {
 		}
 	});
 
-});k
+});
 
 function validateCalculationAnswer() {
 	// Get input value
