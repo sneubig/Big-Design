@@ -32,14 +32,31 @@ $( document ).ready(function() {
 
 	$(".operators").on('click', function(){
 
-		console.log('result: ' + result);
 		console.log('number: ' + number);
 		console.log('newnumber: ' + newnumber);
+		console.log('result: ' + result);
+		
 
 		
 		
 		// Calculate new result if operator is selected in long calculation
 		if(result !== ""){
+
+			
+			if(number === NaN || number === ""){
+				// Prevent NaN when hit "+" consecutively
+				if(operator === "+"){
+					number = 0;
+				// Prevent NaN when hit "/" consecutively
+				}else if(operator === "/"){
+					number = 1;
+				}
+			}
+			console.log('number: ' + number);
+			console.log('newnumber: ' + newnumber);
+			console.log('result: ' + result);
+			console.log('operator: ' + operator);
+
 			// If this is not the first operator in a multi-chained calculation then we want to use the previous operator to
 			// calculate the result, before using the newly clicked operator
 			result = calculateResult(result, number);
@@ -47,28 +64,60 @@ $( document ).ready(function() {
 			// Store the newly clicked operator for the next operation that will be calculated
 			operator = $(this).text();
 
+			console.log('number: ' + number);
+			console.log('newnumber: ' + newnumber);
+			console.log('result: ' + result);
+			console.log('operator: ' + operator);
+
 			newnumber = number;
 			number = '';
 		}else{
+
+			console.log('number: ' + number);
+			console.log('newnumber: ' + newnumber);
+			console.log('result: ' + result);
+			console.log('operator: ' + operator);
+
 			operator = $(this).text();
 			// Add condition to ensure that a valid number is entered first, rather than an operator
 			if(number === NaN || number === ""){
+				console.log('number: ' + number);
+				console.log('newnumber: ' + newnumber);
+				console.log('result: ' + result);
+				console.log('operator: ' + operator);
 				result = 0;
 
 			} else {
+
+				console.log('number: ' + number);
+				console.log('newnumber: ' + newnumber);
+				console.log('result: ' + result);
+				console.log('operator: ' + operator);
 				// Convert String to Integers before passing to calculate function
 				number = parseInt(number, 10);
 
 				if(newnumber === NaN || number === NaN){
 					newnumber = number;
+					console.log('number: ' + number);
+					console.log('newnumber: ' + newnumber);
+					console.log('result: ' + result);
+					console.log('operator: ' + operator);
 				}else{
 
 					if(result !== ""){
 		  			// Calculate the new result
 		  			result = calculateResult(result, number);
 
+		  			console.log('number: ' + number);
+						console.log('newnumber: ' + newnumber);
+						console.log('result: ' + result);
+						console.log('operator: ' + operator);
 		  			testNumLength(result);
 		  		}else{
+		  			console.log('number: ' + number);
+						console.log('newnumber: ' + newnumber);
+						console.log('result: ' + result);
+						console.log('operator: ' + operator);
 		  			// Set Result for the first number in operation
 		  			result = number;
 		  		}
